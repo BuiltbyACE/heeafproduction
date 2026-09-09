@@ -1,0 +1,20 @@
+<svg width="200" height="64" viewBox="0 0 200 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0a21a"/>
+      <stop offset="100%" stop-color="#c98a08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem: stylized mountain peak / rising bar -->
+  <g>
+    <path d="M6 58 L28 8 L50 58 Z" fill="url(#g1)"/>
+    <path d="M28 8 L34 24 L50 58 L28 58 Z" fill="#211A11" opacity="0.85"/>
+    <path d="M12 58 L28 8 L40 58 Z" fill="#D99A13"/>
+    <path d="M22 58 L28 20 L38 58 Z" fill="#FFFFFF" opacity="0.25"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="60" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" letter-spacing="2" fill="#211A11">HEAF</text>
+  <text x="60" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="3" fill="#C98A08">INVESTMENT LIMITED</text>
+</svg>

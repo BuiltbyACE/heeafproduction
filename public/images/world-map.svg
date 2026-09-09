@@ -1,0 +1,57 @@
+<svg width="700" height="360" viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="gslow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#c98a08" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#c98a08" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="700" height="360" fill="transparent"/>
+  <circle cx="350" cy="180" r="150" fill="url(#gslow)"/>
+
+  <circle cx="350" cy="180" r="148" fill="none" stroke="#c98a08" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Dot-matrix world map -->
+  <g fill="#c98a08">
+    <!-- North America -->
+    <circle cx="180" cy="120" r="3"/><circle cx="200" cy="115" r="3"/><circle cx="220" cy="112" r="3"/>
+    <circle cx="175" cy="140" r="3"/><circle cx="195" cy="138" r="3"/><circle cx="215" cy="135" r="3"/><circle cx="230" cy="132" r="3"/>
+    <circle cx="185" cy="158" r="3"/><circle cx="205" cy="156" r="3"/><circle cx="225" cy="152" r="3"/><circle cx="240" cy="148" r="3"/><circle cx="250" cy="142" r="3"/>
+    <circle cx="195" cy="176" r="3"/><circle cx="215" cy="174" r="3"/><circle cx="235" cy="170" r="3"/><circle cx="248" cy="162" r="3"/>
+    <circle cx="208" cy="192" r="3"/><circle cx="225" cy="188" r="3"/><circle cx="235" cy="182" r="3"/>
+    <circle cx="215" cy="206" r="3"/><circle cx="228" cy="200" r="3"/>
+
+    <!-- == blob shape fallback if dots too sparse: I'll also add continent paths == -->
+
+    <!-- South America -->
+    <circle cx="260" cy="215" r="3"/><circle cx="278" cy="225" r="3"/><circle cx="270" cy="240" r="3"/><circle cx="262" cy="258" r="3"/>
+    <circle cx="272" cy="270" r="3"/><circle cx="282" cy="210" r="3"/><circle cx="288" cy="235" r="3"/><circle cx="278" cy="252" r="3"/>
+
+    <!-- Africa -->
+    <circle cx="360" cy="205" r="3"/><circle cx="382" cy="215" r="3"/><circle cx="402" cy="222" r="3"/>
+    <circle cx="352" cy="225" r="3"/><circle cx="372" cy="230" r="3"/><circle cx="392" cy="240" r="3"/>
+    <circle cx="360" cy="245" r="3"/><circle cx="380" cy="255" r="3"/><circle cx="395" cy="262" r="3"/>
+    <circle cx="365" cy="265" r="3"/><circle cx="410" cy="215" r="3"/><circle cx="406" cy="238" r="3"/>
+    <circle cx="388" cy="196" r="3"/><circle cx="368" cy="192" r="3"/><circle cx="405" cy="255" r="3"/>
+    <circle cx="372" cy="282" r="3"/><circle cx="392" cy="278" r="3"/><circle cx="340" cy="278" r="3"/><circle cx="365" cy="250" r="3"/>
+    <circle cx="350" cy="262" r="3"/>
+
+    <!-- Europe -->
+    <circle cx="380" cy="150" r="3"/><circle cx="400" cy="148" r="3"/><circle cx="420" cy="145" r="3"/><circle cx="440" cy="148" r="3"/>
+    <circle cx="372" cy="168" r="3"/><circle cx="392" cy="165" r="3"/><circle cx="412" cy="162" r="3"/><circle cx="432" cy="165" r="3"/>
+    <circle cx="385" cy="182" r="3"/><circle cx="405" cy="180" r="3"/><circle cx="425" cy="180" r="3"/>
+    <circle cx="395" cy="196" r="3"/><circle cx="415" cy="196" r="3"/>
+
+    <!-- Asia -->
+    <circle cx="470" cy="150" r="3"/><circle cx="490" cy="148" r="3"/><circle cx="510" cy="150" r="3"/><circle cx="530" cy="152" r="3"/>
+    <circle cx="460" cy="168" r="3"/><circle cx="480" cy="165" r="3"/><circle cx="500" cy="163" r="3"/><circle cx="520" cy="160" r="3"/><circle cx="540" cy="158" r="3"/>
+    <circle cx="452" cy="184" r="3"/><circle cx="472" cy="182" r="3"/><circle cx="492" cy="180" r="3"/><circle cx="512" cy="178" r="3"/><circle cx="532" cy="172" r="3"/><circle cx="548" cy="168" r="3"/>
+    <circle cx="460" cy="200" r="3"/><circle cx="480" cy="198" r="3"/><circle cx="500" cy="196" r="3"/><circle cx="520" cy="192" r="3"/><circle cx="535" cy="188" r="3"/>
+    <circle cx="468" cy="216" r="3"/><circle cx="488" cy="214" r="3"/><circle cx="506" cy="210" r="3"/>
+    <circle cx="545" cy="185" r="3"/><circle cx="555" cy="195" r="3"/><circle cx="560" cy="205" r="3"/>
+    <circle cx="575" cy="200" r="3"/><circle cx="585" cy="208" r="3"/><circle cx="592" cy="216" r="3"/>
+    <circle cx="498" cy="230" r="3"/><circle cx="515" cy="232" r="3"/><circle cx="505" cy="246" r="3"/><circle cx="515" cy="258" r="3"/><circle cx="508" cy="170" r="3"/>
+
+    <!-- Australia -->
+    <circle cx="560" cy="258" r="3"/><circle cx="580" cy="260" r="3"/><circle cx="560" cy="275" r="3"/><circle cx="580" cy="278" r="3"/><circle cx="600" cy="276" r="3"/><circle cx="585" cy="290" r="3"/><circle cx="600" cy="292" r="3"/><circle cx="615" cy="282" r="3"/><circle cx="612" cy="268" r="3"/>
+  </g>
+</svg>

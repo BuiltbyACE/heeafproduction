@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #2B1F14;
+  --color-primary-darker: #17130D;
+  --color-gold: #C8901E;
+  --color-gold-light: #E0A51A;
+  --color-cream: #F7F4F0;
+  --color-text-dark: #2B2117;
+
+  --color-energy: #E0791C;
+  --color-energy-deep: #8C4A0F;
+  --color-agri: #8A7A2E;
+  --color-agri-deep: #55491A;
+  --color-estate: #A9672E;
+  --color-estate-deep: #6B4019;
+  --color-metal: #8B8F98;
+  --color-metal-deep: #45484F;
+
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-montserrat);
+}
+
+body {
+  background: #ffffff;
+  color: #2A2115;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+main {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+img,
+video,
+picture {
+  max-width: 100%;
+}
+
+/* Subtle film-grain texture for premium depth on dark sections */
+.bg-grain {
+  position: relative;
+}
+.bg-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.animate-kenburns {
+  animation: kenburns 20s ease-out forwards;
+}
+
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(3%, -4%) rotate(6deg); }
+  66% { transform: translate(-3%, 3%) rotate(-5deg); }
+}
+.animate-blob-float {
+  animation: blob-float 16s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.7); opacity: 0.35; }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+/* Diagonal shine sweep on hover, layered onto existing button classes */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: left 0.6s ease;
+}
+.btn-shine:hover::after {
+  left: 130%;
+}
+
+/* Hero diagonal panel reveal — clip-path wipes from left edge */
+@keyframes diagonal-reveal {
+  from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
+  to   { clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+}
+@keyframes diagonal-reverse-reveal {
+  from { clip-path: polygon(0 0, 0 0, 0 100%, 100% 100%); }
+  to   { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+@keyframes diagonal-bottom-reveal {
+  from { clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%); }
+  to   { clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+}
+
+/* Hero background left-to-right wipe */
+@keyframes hero-wipe {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+/* Slow image scale for cinematic sector images */
+@keyframes hero-image-settle {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1); }
+}
+
+.animate-hero-wipe {
+  animation: hero-wipe 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-diagonal-reveal {
+  animation: diagonal-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-diagonal-reverse-reveal {
+  animation: diagonal-reverse-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-diagonal-bottom-reveal {
+  animation: diagonal-bottom-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-image-settle {
+  animation: hero-image-settle 20s ease-out forwards;
+}
+
+/* Gold-themed image card — reusable across all image containers */
+.gold-image-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+}
+/* 1px gold gradient border, masked so it curves with the rounded corners */
+.gold-image-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #f5d76e, #b8860b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+/* Subtle warm vignette so light images sit naturally on dark/gold sections */
+.gold-image-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(212, 175, 55, 0.12) 82%, rgba(0, 0, 0, 0.18) 100%);
+}
+.gold-image-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.gold-image-card:hover {
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.4);
+}
+.gold-image-card:hover img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-blob-float,
+  .animate-pulse-dot,
+  .animate-hero-wipe,
+  .animate-diagonal-reveal,
+  .animate-diagonal-reverse-reveal,
+  .animate-diagonal-bottom-reveal,
+  .animate-hero-image-settle {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,62 @@
+<svg width="420" height="300" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a6a2c"/>
+      <stop offset="30%" stop-color="#5a8a34"/>
+      <stop offset="70%" stop-color="#7a9a3c"/>
+      <stop offset="100%" stop-color="#4a3a18"/>
+    </linearGradient>
+    <radialGradient id="asun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff6d8"/>
+      <stop offset="100%" stop-color="#e8c96a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="420" height="300" fill="url(#ag)"/>
+  <circle cx="210" cy="80" r="90" fill="url(#asun)"/>
+
+  <!-- grass/top -->
+  <rect x="0" y="0" width="420" height="90" fill="#5a8a34" opacity="0.4"/>
+
+  <!-- crop rows -->
+  <g stroke="#4a7a28" stroke-width="4" opacity="0.8">
+    <path d="M0 110 q20 -5 40 0"/>
+    <path d="M40 108 q20 -5 40 0"/>
+    <path d="M80 112 q20 -5 40 0"/>
+    <path d="M120 109 q20 -5 40 0"/>
+    <path d="M160 113 q20 -5 40 0"/>
+    <path d="M200 110 q20 -5 40 0"/>
+    <path d="M240 108 q20 -5 40 0"/>
+    <path d="M280 112 q20 -5 40 0"/>
+    <path d="M320 109 q20 -5 40 0"/>
+    <path d="M360 113 q20 -5 40 0"/>
+  </g>
+
+  <!-- coffee beans center -->
+  <g transform="translate(140,150)">
+    <rect x="0" y="0" width="140" height="90" rx="10" fill="#5a3a18"/>
+    <rect x="8" y="8" width="124" height="74" rx="6" fill="#6b4a1c"/>
+    <g fill="#8a5a24" stroke="#3a2410" stroke-width="1">
+      <ellipse cx="30" cy="30" rx="14" ry="9"/>
+      <ellipse cx="50" cy="22" rx="14" ry="9"/>
+      <ellipse cx="70" cy="30" rx="14" ry="9"/>
+      <ellipse cx="90" cy="22" rx="14" ry="9"/>
+      <ellipse cx="110" cy="30" rx="14" ry="9"/>
+      <ellipse cx="30" cy="52" rx="14" ry="9"/>
+      <ellipse cx="50" cy="60" rx="14" ry="9"/>
+      <ellipse cx="70" cy="52" rx="14" ry="9"/>
+      <ellipse cx="90" cy="60" rx="14" ry="9"/>
+      <ellipse cx="110" cy="52" rx="14" ry="9"/>
+    </g>
+    <path d="M20 14 q30 8 100 0" stroke="#8a5a24" stroke-width="4" fill="none"/>
+  </g>
+
+  <!-- leaves -->
+  <g fill="#3a6a2c" opacity="0.9">
+    <ellipse cx="70" cy="130" rx="30" ry="14" transform="rotate(-15 70 130)"/>
+    <ellipse cx="120" cy="140" rx="28" ry="13" transform="rotate(12 120 140)"/>
+    <ellipse cx="170" cy="128" rx="30" ry="14" transform="rotate(-8 170 128)"/>
+  </g>
+
+  <!-- ground -->
+  <rect x="0" y="240" width="420" height="60" fill="#4a3a18"/>
+</svg>

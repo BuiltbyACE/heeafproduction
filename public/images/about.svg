@@ -1,0 +1,63 @@
+<svg width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="agday" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#cfe3d8"/>
+      <stop offset="100%" stop-color="#8fc3a8"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="360" fill="url(#agday)"/>
+
+  <!-- ground -->
+  <rect x="0" y="280" width="500" height="80" fill="#8a9a6a"/>
+  <rect x="0" y="285" width="500" height="4" fill="#6b7a4c"/>
+
+  <!-- stacked shipping containers -->
+  <g>
+    <!-- row 1 (bottom) -->
+    <rect x="30" y="215" width="110" height="70" rx="4" fill="#c0392b"/>
+    <rect x="142" y="215" width="110" height="70" rx="4" fill="#2e86ab"/>
+    <rect x="254" y="215" width="110" height="70" rx="4" fill="#d98a2b"/>
+    <rect x="366" y="215" width="110" height="70" rx="4" fill="#5a8a3c"/>
+    <!-- row 2 (top) -->
+    <rect x="30" y="143" width="110" height="70" rx="4" fill="#2e86ab"/>
+    <rect x="142" y="143" width="110" height="70" rx="4" fill="#c0392b"/>
+    <rect x="254" y="143" width="110" height="70" rx="4" fill="#6b4a1c"/>
+    <rect x="366" y="143" width="110" height="70" rx="4" fill="#c0392b"/>
+    <!-- details on containers -->
+    <g stroke="#1c1c1c" stroke-width="2" opacity="0.5">
+      <rect x="30" y="143" width="110" height="70"/>
+      <rect x="142" y="143" width="110" height="70"/>
+      <rect x="254" y="143" width="110" height="70"/>
+      <rect x="366" y="143" width="110" height="70"/>
+    </g>
+  </g>
+
+  <!-- forklift -->
+  <g transform="translate(330,270)">
+    <rect x="0" y="0" width="70" height="40" rx="4" fill="#d98a2b"/>
+    <rect x="0" y="0" width="70" height="14" rx="4" fill="#e8a83c"/>
+    <rect x="-18" y="-14" width="30" height="10" rx="2" fill="#c9a04a"/>
+    <rect x="-20" y="-4" width="50" height="12" rx="3" fill="#c0392b"/>
+    <circle cx="20" cy="42" r="12" fill="#1b1208" stroke="#7a5a24" stroke-width="2"/>
+    <circle cx="55" cy="42" r="14" fill="#1b1208" stroke="#7a5a24" stroke-width="2"/>
+  </g>
+
+  <!-- stylized globe overlay top-right -->
+  <g transform="translate(395,75)" opacity="0.9">
+    <circle cx="0" cy="0" r="70" fill="#d98a2b" opacity="0.9"/>
+    <circle cx="0" cy="0" r="70" fill="#c9b98e" opacity="0.3"/>
+    <ellipse cx="0" cy="0" rx="28" ry="70" fill="none" stroke="#fff" stroke-width="2" opacity="0.7"/>
+    <ellipse cx="0" cy="0" rx="70" ry="30" fill="none" stroke="#fff" stroke-width="2" opacity="0.7"/>
+    <path d="M-70 0 H70" stroke="#fff" stroke-width="2" opacity="0.7"/>
+    <path d="M0 -70 V70" stroke="#fff" stroke-width="2" opacity="0.7"/>
+    <!-- continents hint -->
+    <path d="M-20 -20 q-10 12 -6 28 q8 -2 12 8 q8 -10 2 -30z" fill="#c98a08" opacity="0.6"/>
+  </g>
+
+  <!-- sky clouds -->
+  <g fill="#ffffff" opacity="0.5">
+    <ellipse cx="120" cy="70" rx="60" ry="20"/>
+    <ellipse cx="200" cy="50" rx="70" ry="18"/>
+    <ellipse cx="60" cy="110" rx="50" ry="16"/>
+  </g>
+</svg>
