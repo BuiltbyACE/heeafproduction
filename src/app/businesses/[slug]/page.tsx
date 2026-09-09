@@ -125,18 +125,21 @@ export default async function BusinessPage({ params }: Props) {
                 </h3>
                 {biz.itemImages ? (
                   <div className="mt-4 grid grid-cols-2 gap-4">
-                    {biz.items.map((item) => (
-                      <div key={item} className="overflow-hidden rounded-lg border border-black/5">
-                        <img
-                          src={biz.itemImages[item]}
-                          alt={item}
-                          className="h-[140px] w-full object-cover"
-                        />
-                        <div className="px-3 py-2">
-                          <span className="text-[12px] font-semibold text-text-dark">{item}</span>
+                    {biz.items.map((item) => {
+                      const img = biz.itemImages![item];
+                      return img ? (
+                        <div key={item} className="overflow-hidden rounded-lg border border-black/5">
+                          <img
+                            src={img}
+                            alt={item}
+                            className="h-[140px] w-full object-cover"
+                          />
+                          <div className="px-3 py-2">
+                            <span className="text-[12px] font-semibold text-text-dark">{item}</span>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ) : null;
+                    })}
                   </div>
                 ) : (
                   <ul className="mt-3 flex flex-col gap-2">
