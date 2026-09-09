@@ -21,13 +21,14 @@ export default function ProductBlock({
         variant={reverse ? "right" : "left"}
         className={reverse ? "lg:order-2" : "lg:order-1"}
       >
-        <GoldFrame
-          src={product.image}
-          alt={product.alt}
-          width={880}
-          height={620}
-          fill={false}
-        />
+        <div className="gold-image-card relative aspect-[880/620] w-full overflow-hidden rounded-xl">
+          <img
+            src={product.image}
+            alt={product.alt}
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary-darker/10" />
+        </div>
       </Reveal>
 
       <Reveal

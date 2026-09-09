@@ -9,6 +9,7 @@ export type Business = {
   description: string;
   itemsLabel: string;
   items: string[];
+  itemImages?: Record<string, string>;
   image: string;
   buttonLabel: string;
   subItems?: BusinessSubItem[];
@@ -65,6 +66,10 @@ export const businesses: Business[] = [
       "We deal in the sourcing and supply of precious and base metals, connecting producers with buyers across regional and international markets.",
     itemsLabel: "Products",
     items: ["Gold", "Copper"],
+    itemImages: {
+      Gold: "/images/products/gold.jpg",
+      Copper: "/images/products/copper.jpg",
+    },
     image: "/images/metal-photo.jpg",
     buttonLabel: "EXPLORE METAL",
   },

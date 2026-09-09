@@ -190,4 +190,27 @@ export const productSectors: SectorGroup[] = [
       },
     ],
   },
+  {
+    slug: "metal",
+    label: "Metal Products",
+    intro:
+      "Two metals — one precious, one industrial — sourced and supplied to buyers across regional and international markets with attention to grade, purity and timely delivery.",
+    sectionBg: "cream",
+    products: [
+      {
+        slug: "gold",
+        title: "Gold",
+        image: "/images/gold.jpeg",
+        alt: "Raw gold nuggets and refined bars displayed on a dark surface under warm lighting",
+        copy: "Gold remains one of the most sought-after precious metals globally, serving as both a store of value and a critical input in electronics, jewelry and financial markets. HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance this trade demands. Our network connects African mining operations with international buyers seeking conflict-free, properly certified gold supplies.",
+      },
+      {
+        slug: "copper",
+        title: "Copper",
+        image: "/images/copper.jpeg",
+        alt: "Stacked copper cathodes and coils in an industrial warehouse under cool overhead lighting",
+        copy: "Copper is the backbone of modern infrastructure — essential for electrical wiring, plumbing, renewable energy systems and electronics manufacturing. HEEAF supplies copper cathodes, cathodes and refined copper products to manufacturers, construction firms and commodity traders who need consistent grade, clean certification and reliable delivery schedules. Our supply chain spans mining regions to smelters to end buyers, ensuring traceability and quality at every stage.",
+      },
+    ],
+  },
 ];

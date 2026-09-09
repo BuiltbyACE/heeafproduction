@@ -125,7 +125,7 @@ export default function Footer() {
       <div className="bg-gold">
         <div className="mx-auto max-w-[1400px] px-6 py-[10px] flex flex-col sm:flex-row items-center justify-between gap-1">
           <span className="text-[11px] font-semibold text-primary-dark tracking-wide">
-            &copy; 2024 HEEAF INVESTMENT LIMITED. All Rights Reserved.
+            &copy; 2026 HEEAF INVESTMENT LIMITED. All Rights Reserved.
           </span>
           <span className="text-[11px] font-bold uppercase tracking-[0.35em] text-primary-dark">
             YOUR SATISFACTION IS OUR PRIDE
