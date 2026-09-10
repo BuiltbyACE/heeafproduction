@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "HEEAF Investment Limited",
   description:
     "Connecting Opportunities. Delivering Value Across Borders. Quality and affordable solutions in Energy, Agriculture and Real Estate.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -3,7 +3,18 @@
     "allow": [
       "Bash(python *)",
       "Bash(pip install *)",
-      "Bash(pip --version)"
+      "Bash(pip --version)",
+      "Bash(tasklist /FI \"IMAGENAME eq node.exe\")",
+      "Bash(Get-Content *)",
+      "Bash(npm run *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl *)",
+      "Bash(taskkill //PID 33472 //F)",
+      "Bash(taskkill //IM node.exe //F)",
+      "Bash(echo \"Started PID: $!\")",
+      "Bash(python audit.py)",
+      "Bash(echo \"AUDIT_DONE\")"
     ]
   }
 }

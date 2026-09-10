@@ -48,6 +48,19 @@ def log_warn(msg):
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)
 
+    # ── 0. WARMUP — let Next.js compile the homepage (can take 60-90s) ───────
+    print("Warming up Next.js dev server (first compilation may take up to 2 min)...")
+    _ctx = browser.new_context()
+    _pg = _ctx.new_page()
+    try:
+        _pg.goto(BASE_URL, timeout=180000, wait_until="domcontentloaded")
+        _pg.wait_for_load_state("networkidle", timeout=60000)
+        print("Warmup complete — server is serving pages.\n")
+    except Exception as _e:
+        print(f"Warmup warning: {_e} — proceeding anyway.\n")
+    finally:
+        _ctx.close()
+
     # ── 1. VISUAL SCREENSHOT AUDIT ───────────────────────────────────────────
     print("\n" + "="*60)
     print("1. VISUAL SCREENSHOT AUDIT (all pages x all viewports)")
@@ -59,8 +72,8 @@ with sync_playwright() as p:
         for pg in PAGES:
             url = BASE_URL + pg["path"]
             try:
-                response = page.goto(url, timeout=20000)
-                page.wait_for_load_state("networkidle", timeout=20000)
+                response = page.goto(url, timeout=60000, wait_until="domcontentloaded")
+                page.wait_for_load_state("networkidle", timeout=30000)
                 status = response.status if response else 0
                 shot = SCREENSHOT_DIR / f"{pg['name']}_{vp['name']}.png"
                 page.screenshot(path=str(shot), full_page=True)
@@ -105,8 +118,8 @@ with sync_playwright() as p:
     # Business dropdown hover
     print("\n  [Business Dropdown]")
     try:
-        page.goto(BASE_URL)
-        page.wait_for_load_state("networkidle")
+        page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         biz = page.locator("header").get_by_text("OUR BUSINESSES").first
         if biz.is_visible():
             biz.hover()
@@ -124,8 +137,8 @@ with sync_playwright() as p:
     # CTA "Talk to Us" button
     print("\n  [Header CTA]")
     try:
-        page.goto(BASE_URL)
-        page.wait_for_load_state("networkidle")
+        page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         cta = page.locator("a:has-text('TALK TO US')").first
         if cta.is_visible():
             cta.click()
@@ -142,8 +155,8 @@ with sync_playwright() as p:
     # Footer links (HTTP status check)
     print("\n  [Footer Links]")
     try:
-        page.goto(BASE_URL)
-        page.wait_for_load_state("networkidle")
+        page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         footer_anchors = page.locator("footer a[href]").all()
         for anchor in footer_anchors:
             href = anchor.get_attribute("href") or ""
@@ -166,8 +179,8 @@ with sync_playwright() as p:
     context = browser.new_context(viewport={"width": 375, "height": 812})
     page = context.new_page()
     try:
-        page.goto(BASE_URL)
-        page.wait_for_load_state("networkidle")
+        page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         burger = page.locator("button[aria-label='Toggle navigation menu']")
         if burger.is_visible():
             burger.click()
@@ -205,8 +218,8 @@ with sync_playwright() as p:
     # 3a. Empty submission → all required field errors
     print("\n  [Empty Submission]")
     try:
-        page.goto(BASE_URL + "/contact")
-        page.wait_for_load_state("networkidle")
+        page.goto(BASE_URL + "/contact", timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         page.locator("button[type='submit']").click()
         page.wait_for_timeout(500)
         page.screenshot(path=str(SCREENSHOT_DIR / "form_empty_errors.png"), full_page=False)
@@ -229,8 +242,8 @@ with sync_playwright() as p:
     # 3b. Invalid email
     print("\n  [Invalid Email]")
     try:
-        page.reload()
-        page.wait_for_load_state("networkidle")
+        page.reload(timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         page.fill("#email", "not-a-valid-email")
         page.locator("button[type='submit']").click()
         page.wait_for_timeout(500)
@@ -246,8 +259,8 @@ with sync_playwright() as p:
     # 3c. Error clears on correction
     print("\n  [Error Clears on Input]")
     try:
-        page.reload()
-        page.wait_for_load_state("networkidle")
+        page.reload(timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         page.locator("button[type='submit']").click()
         page.wait_for_timeout(400)
         err_before = page.locator("p:has-text('Full name is required')").count()
@@ -264,8 +277,8 @@ with sync_playwright() as p:
     # 3d. Successful valid submission
     print("\n  [Valid Submission]")
     try:
-        page.reload()
-        page.wait_for_load_state("networkidle")
+        page.reload(timeout=60000, wait_until="domcontentloaded")
+        page.wait_for_load_state("networkidle", timeout=30000)
         page.fill("#fullName", "Test Auditor")
         page.fill("#email", "test@example.com")
         page.fill("#phone", "+254 700 000 000")
@@ -312,8 +325,8 @@ with sync_playwright() as p:
         page = context.new_page()
         for cp in responsive_pages:
             try:
-                page.goto(BASE_URL + cp["path"])
-                page.wait_for_load_state("networkidle")
+                page.goto(BASE_URL + cp["path"], timeout=60000, wait_until="domcontentloaded")
+                page.wait_for_load_state("networkidle", timeout=30000)
 
                 # Horizontal overflow
                 overflow = page.evaluate(
