@@ -26,9 +26,8 @@ export default function AboutSection() {
             </h2>
             <div className="mt-3 h-[3px] w-14 bg-gold" />
             <p className="mt-5 text-[13px] leading-relaxed text-text-dark/75 max-w-[560px]">
-              HEEAF Investment Limited is a company that deals with the buying
-              and selling of products and services. We currently focus on Energy,
-              Agriculture and Real Estate. We are physically located in Nigeria
+              HEEAF Investment Limited is a commodity trading company dealing in
+              metals, livestock and energy. We are physically located in Nigeria
               and Kenya with the ambition of expanding to other countries.
             </p>
             <Link

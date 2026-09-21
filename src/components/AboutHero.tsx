@@ -17,10 +17,9 @@ export default function AboutHero() {
           </p>
           <div className="mt-4 h-[3px] w-16 bg-gold" />
           <p className="mt-5 max-w-[520px] text-[13px] leading-relaxed text-white/80">
-            HEEAF Investment Limited is a company that deals with the buying and
-            selling of products and services. We currently focus on Energy,
-            Agriculture and Real Estate, with the ambition of expanding to other
-            countries.
+            HEEAF Investment Limited is a commodity trading company. We trade
+            metals, livestock and energy, connecting producers with buyers across
+            Africa and beyond, with the ambition of expanding further.
           </p>
         </Reveal>
 

@@ -17,67 +17,58 @@ export type Business = {
 
 export const businesses: Business[] = [
   {
-    slug: "energy",
-    title: "ENERGY",
+    slug: "metals",
+    title: "METALS",
     description:
-      "We deal with the purchase and supply of petroleum products and alternative energy solutions that power industries and economies.",
-    itemsLabel: "Products",
-    items: [
-      "Premium Motor Spirit (PMS)",
-      "Automotive Gas Oil (AGO)",
-      "Jet Fuel",
-      "Liquified Petroleum Gas (LPG)",
-      "Kerosene",
-      "Crude Oil",
-      "Charcoal Briquettes",
-    ],
-    image: "/images/energy-photo.jpg",
-    buttonLabel: "EXPLORE ENERGY",
-  },
-  {
-    slug: "agriculture",
-    title: "AGRICULTURE",
-    description:
-      "We purchase and supply a wide range of agricultural products across Africa and internationally with quality, care and efficiency.",
-    itemsLabel: "Products",
-    items: ["Hides & Skins", "Meat & Fish", "Spices", "Tea", "Coffee", "And more"],
-    image: "/images/agriculture-photo.jpg",
-    buttonLabel: "EXPLORE AGRICULTURE",
-  },
-  {
-    slug: "real-estate",
-    title: "REAL ESTATE",
-    description:
-      "We are involved in the purchase and sale of property, as well as rentals, delivering value and creating spaces that last.",
-    itemsLabel: "Services",
-    items: [
-      "Property Purchase",
-      "Property Sales",
-      "Property Rentals",
-      "Investment Opportunities",
-    ],
-    image: "/images/real-estate-photo.jpg",
-    buttonLabel: "EXPLORE REAL ESTATE",
-  },
-  {
-    slug: "metal",
-    title: "METAL",
-    description:
-      "We deal in the sourcing and supply of precious and base metals, connecting producers with buyers across regional and international markets.",
-    itemsLabel: "Products",
+      "We source and trade precious and base metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets with attention to grade, purity and timely delivery.",
+    itemsLabel: "Commodities",
     items: ["Gold", "Copper"],
     itemImages: {
       Gold: "/images/products/gold.jpg",
       Copper: "/images/products/copper.jpg",
     },
-    image: "/images/metal-photo.jpg",
-    buttonLabel: "EXPLORE METAL",
+    image: "/images/gold.jpeg",
+    buttonLabel: "EXPLORE METALS",
+  },
+  {
+    slug: "livestock",
+    title: "LIVESTOCK",
+    description:
+      "We trade livestock and livestock products — animal skins and hides, meat and fish — sourced across Africa and supplied to tanneries, processors, wholesalers and international buyers with quality and care.",
+    itemsLabel: "Commodities",
+    items: ["Animal Skins & Hides", "Meat", "Fish"],
+    image: "/images/agriculture-photo.jpg",
+    buttonLabel: "EXPLORE LIVESTOCK",
+  },
+  {
+    slug: "energy",
+    title: "ENERGY",
+    description:
+      "We trade energy commodities — crude oil and refined petroleum products — connecting producers and refiners with industrial buyers, distributors and fleets across regional and international markets.",
+    itemsLabel: "Commodities",
+    items: [
+      "Crude Oil",
+      "Premium Motor Spirit (PMS)",
+      "Automotive Gas Oil (AGO)",
+      "Jet Fuel",
+      "Liquified Petroleum Gas (LPG)",
+      "Kerosene",
+    ],
+    itemImages: {
+      "Crude Oil": "/images/products/crude-oil.jpg",
+      "Premium Motor Spirit (PMS)": "/images/products/pms.jpg",
+      "Automotive Gas Oil (AGO)": "/images/products/ago.jpg",
+      "Jet Fuel": "/images/products/jet-fuel.jpg",
+      "Liquified Petroleum Gas (LPG)": "/images/products/lpg.jpg",
+      Kerosene: "/images/products/kerosene.jpg",
+    },
+    image: "/images/energy-photo.jpg",
+    buttonLabel: "EXPLORE ENERGY",
   },
 ];
 
 export const businessPaths: Record<string, string> = {
+  metals: "/businesses/metals",
+  livestock: "/businesses/livestock",
   energy: "/businesses/energy",
-  agriculture: "/businesses/agriculture",
-  "real-estate": "/businesses/real-estate",
-  metal: "/businesses/metal",
 };

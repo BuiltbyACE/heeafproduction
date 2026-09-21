@@ -15,9 +15,9 @@ const quickLinks = [
 ];
 
 const businesses = [
+  { label: "Metals", href: "/businesses/metals" },
+  { label: "Livestock", href: "/businesses/livestock" },
   { label: "Energy", href: "/businesses/energy" },
-  { label: "Agriculture", href: "/businesses/agriculture" },
-  { label: "Real Estate", href: "/businesses/real-estate" },
 ];
 
 export default function Footer() {
@@ -38,8 +38,9 @@ export default function Footer() {
               />
             </div>
             <p className="mt-5 text-[12px] leading-relaxed text-white/60">
-              HEEAF Investment Limited is committed to delivering quality
-              products and services with integrity, efficiency and excellence.
+              HEEAF Investment Limited is a commodity trading company committed
+              to connecting markets and delivering value with integrity,
+              efficiency and excellence.
             </p>
           </div>
 

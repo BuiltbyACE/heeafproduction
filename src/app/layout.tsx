@@ -17,10 +17,14 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "HEEAF Investment Limited",
   description:
+<<<<<<< HEAD
     "Connecting Opportunities. Delivering Value Across Borders. Quality and affordable solutions in Energy, Agriculture and Real Estate.",
   icons: {
     icon: "/favicon.png",
   },
+=======
+    "Connecting Opportunities. Delivering Value Across Borders. Commodity trading in metals, livestock and energy across Africa and beyond.",
+>>>>>>> 1bcb5db (Changes and trade commodity)
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

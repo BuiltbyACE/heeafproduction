@@ -14,9 +14,9 @@ export default function MissionVision() {
             </h3>
             <div className="mt-3 h-[2px] w-10 bg-gold" />
             <p className="mt-4 text-[13px] leading-relaxed text-white/70">
-              To ease accessibility and deliver affordable high-quality energy,
-              agricultural and real estate products and services to our clients,
-              while upholding company integrity and customer satisfaction.
+              To ease accessibility and deliver quality commodities — metals,
+              livestock and energy — to our clients, while upholding company
+              integrity and customer satisfaction.
             </p>
           </div>
 
@@ -29,9 +29,8 @@ export default function MissionVision() {
             </h3>
             <div className="mt-3 h-[2px] w-10 bg-gold" />
             <p className="mt-4 text-[13px] leading-relaxed text-white/70">
-              To be a global beacon of relief in the energy, agricultural and
-              real estate sector, that our customers and partners smile as they
-              interact with us.
+              To be a global beacon of trust in commodity trade, that our
+              customers and partners smile as they interact with us.
             </p>
           </div>
         </div>

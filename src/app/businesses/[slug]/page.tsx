@@ -22,15 +22,15 @@ type SectorStyle = {
 };
 
 const sectorStyles: Record<string, SectorStyle> = {
-  energy: {
-    tone: "energy",
-    text: "text-energy",
-    bg: "bg-energy",
-    border: "border-energy/50",
-    dot: "bg-energy",
-    button: "bg-energy hover:brightness-110",
+  metals: {
+    tone: "metal",
+    text: "text-metal",
+    bg: "bg-metal",
+    border: "border-metal/50",
+    dot: "bg-metal",
+    button: "bg-metal hover:brightness-110",
   },
-  agriculture: {
+  livestock: {
     tone: "agri",
     text: "text-agri",
     bg: "bg-agri",
@@ -38,21 +38,13 @@ const sectorStyles: Record<string, SectorStyle> = {
     dot: "bg-agri",
     button: "bg-agri hover:brightness-110",
   },
-  "real-estate": {
-    tone: "estate",
-    text: "text-estate",
-    bg: "bg-estate",
-    border: "border-estate/50",
-    dot: "bg-estate",
-    button: "bg-estate hover:brightness-110",
-  },
-  metal: {
-    tone: "metal",
-    text: "text-metal",
-    bg: "bg-metal",
-    border: "border-metal/50",
-    dot: "bg-metal",
-    button: "bg-metal hover:brightness-110",
+  energy: {
+    tone: "energy",
+    text: "text-energy",
+    bg: "bg-energy",
+    border: "border-energy/50",
+    dot: "bg-energy",
+    button: "bg-energy hover:brightness-110",
   },
 };
 

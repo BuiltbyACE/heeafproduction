@@ -1,419 +1,219 @@
-"use client";
-
 import Image from "next/image";
+import Link from "next/link";
+import type { LucideIcon } from "lucide-react";
 import {
-  Droplets,
-  Leaf,
-  Home as HomeIcon,
-  Fuel,
-  Flame,
-  ShoppingBag,
+  ArrowRight,
+  Gem,
+  Zap,
+  ShieldCheck,
   Drumstick,
   Fish,
-  Building2,
-  Landmark,
-  LandPlot,
+  Droplets,
+  Fuel,
+  Flame,
   Handshake,
-  ShieldCheck,
+  Leaf,
   Users,
 } from "lucide-react";
 
+type Sector = {
+  slug: string;
+  title: string;
+  tagline: string;
+  description: string;
+  image: string;
+  icon: LucideIcon;
+  tags: { label: string; icon: LucideIcon }[];
+};
+
+const sectors: Sector[] = [
+  {
+    slug: "metals",
+    title: "METALS",
+    tagline: "Precious & Base Metals",
+    description:
+      "We source and trade precious and base metals, connecting mining producers with refiners, manufacturers and buyers worldwide.",
+    image: "/images/gold.jpeg",
+    icon: Gem,
+    tags: [
+      { label: "Gold", icon: Gem },
+      { label: "Copper", icon: Zap },
+    ],
+  },
+  {
+    slug: "livestock",
+    title: "LIVESTOCK",
+    tagline: "Animal Skins, Hides, Meat & Fish",
+    description:
+      "We trade livestock and livestock products, from animal skins and hides to meat and fish, serving processors and buyers across markets.",
+    image: "/images/agriculture-photo.jpg",
+    icon: ShieldCheck,
+    tags: [
+      { label: "Animal Skins & Hides", icon: ShieldCheck },
+      { label: "Meat", icon: Drumstick },
+      { label: "Fish", icon: Fish },
+    ],
+  },
+  {
+    slug: "energy",
+    title: "ENERGY",
+    tagline: "Crude Oil & Petroleum Products",
+    description:
+      "We trade crude oil and refined petroleum products, keeping transportation, industry and households running across our markets.",
+    image: "/images/energy-photo.jpg",
+    icon: Droplets,
+    tags: [
+      { label: "Crude Oil", icon: Droplets },
+      { label: "PMS", icon: Fuel },
+      { label: "AGO", icon: Flame },
+    ],
+  },
+];
+
+const values = [
+  { icon: Handshake, title: "Integrity", text: "We do what is right" },
+  { icon: Leaf, title: "Sustainability", text: "For future generations" },
+  { icon: Users, title: "Community", text: "Stronger together" },
+  { icon: ShieldCheck, title: "Excellence", text: "In everything we do" },
+];
+
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#080a0e] overflow-hidden">
-      {/* ── DESKTOP VIEW (md+): Exact 1:1 Pixel-Perfect Layout with coded live typography ── */}
-      <div className="relative mx-auto hidden md:block w-full max-w-[1920px] aspect-[1536/872] select-none">
-        {/* Crisp clean photo backdrop (3 sectors, sky, tanker, cows/meats, luxury villa & gold divider lines) */}
+    <section className="relative overflow-hidden bg-[#080a0e]">
+      {/* Background */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/hero-clean-bg.jpg"
-          alt="HEEAF Investment Limited - Powering Growth Across Key Sectors"
+          src="/images/hero-photo.jpg"
+          alt="HEEAF Investment Limited — global commodity trade"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
+        <div className="absolute inset-0 bg-[#080a0e]/85" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#080a0e] via-[#080a0e]/85 to-[#080a0e]/40" />
+      </div>
+      <div className="pointer-events-none absolute -top-40 -right-32 h-[520px] w-[520px] rounded-full bg-[#d4941c]/20 blur-3xl" />
 
-        {/* ── 1. Top-Left Headline & Copy (100% Coded Vector Typography) ── */}
-        <div className="absolute top-[4.5%] left-[3.2%] w-[35%] z-20 pointer-events-auto">
-          <p className="text-[10px] lg:text-[11.5px] font-bold uppercase tracking-[0.32em] text-[#1b2533]">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 pt-16 pb-12 md:pt-24 md:pb-16">
+        {/* Headline */}
+        <div className="max-w-[780px]">
+          <p className="text-[10px] md:text-[11.5px] font-bold uppercase tracking-[0.32em] text-gold">
             WELCOME TO HEEAF INVESTMENT LIMITED
           </p>
-
-          <h1 className="mt-1 font-[family-name:var(--font-heading)] text-[28px] lg:text-[42px] xl:text-[46px] font-black leading-[1.08] text-[#0f172a] tracking-tight">
+          <h1 className="mt-3 font-[family-name:var(--font-heading)] text-[34px] md:text-[52px] lg:text-[58px] font-black leading-[1.06] text-white tracking-tight">
             Connecting Opportunities.
-            <span className="block text-[#d4941c]">Delivering Value Across Borders.</span>
+            <span className="block text-gold">Delivering Value Across Borders.</span>
           </h1>
-
-          <p className="mt-2.5 lg:mt-3 max-w-[340px] text-[11px] lg:text-[13px] font-medium leading-relaxed text-[#334155]">
-            We provide quality and affordable solutions in Energy, Agriculture
-            and Real Estate to clients and partners across Africa and beyond.
+          <div className="mt-5 h-[3px] w-16 bg-gold" />
+          <p className="mt-5 max-w-[560px] text-[13px] md:text-[15px] leading-relaxed text-white/80">
+            HEEAF Investment Limited is a commodity trading company. We source,
+            trade and supply commodities — metals, livestock and energy —
+            connecting producers with buyers across Africa and beyond.
           </p>
 
-          <div className="mt-2 h-[3px] w-12 bg-[#d4941c]" />
-        </div>
-
-        {/* ── 2. Sector 1 (ENERGY) Card Content (Coded Live Text & Vector Icons) ── */}
-        <div className="absolute top-[51%] left-[2%] w-[29.5%] z-20 flex flex-col justify-between">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 lg:h-14 lg:w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#d4941c] bg-[#0c0e12] shadow-lg">
-              <Droplets className="h-6 w-6 lg:h-7 lg:w-7 text-[#d4941c]" strokeWidth={2} />
-            </div>
-            <div>
-              <h2 className="text-base lg:text-[20px] font-black uppercase tracking-wider text-white">
-                ENERGY
-              </h2>
-              <p className="text-[12px] lg:text-[13.5px] font-semibold text-[#d4941c]">
-                Petroleum Products
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-3 text-[10.5px] lg:text-[12px] leading-relaxed text-white/85">
-            We supply and trade in quality petroleum products, ensuring reliable
-            energy solutions for homes, businesses and industries.
-          </p>
-
-          {/* Product Tag Icons */}
-          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-white/10 pt-2.5">
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Fuel className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Diesel
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Flame className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Petrol
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Droplets className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Lubricants
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Fuel className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Fuel Oils
-            </span>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              href="/businesses"
+              className="btn-shine inline-flex h-[48px] items-center gap-2 rounded bg-gold px-7 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:bg-gold-light hover:scale-[1.03]"
+            >
+              EXPLORE OUR COMMODITIES
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex h-[48px] items-center gap-2 rounded border border-gold px-7 text-[11px] font-bold text-gold uppercase tracking-wider transition-colors hover:bg-gold hover:text-white"
+            >
+              TALK TO US
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
 
-        {/* ── 3. Sector 2 (AGRICULTURE) Card Content (Coded Live Text & Vector Icons) ── */}
-        <div className="absolute top-[51%] left-[36%] w-[29.5%] z-20 flex flex-col justify-between">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 lg:h-14 lg:w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#d4941c] bg-[#0c0e12] shadow-lg">
-              <Leaf className="h-6 w-6 lg:h-7 lg:w-7 text-[#d4941c]" strokeWidth={2} />
-            </div>
-            <div>
-              <h2 className="text-base lg:text-[20px] font-black uppercase tracking-wider text-white">
-                AGRICULTURE
-              </h2>
-              <p className="text-[12px] lg:text-[13.5px] font-semibold text-[#d4941c]">
-                Animal Skin, Hides, Meat & Fish
-              </p>
-            </div>
-          </div>
+        {/* Commodity sectors */}
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {sectors.map((sector) => {
+            const Icon = sector.icon;
+            return (
+              <Link
+                key={sector.slug}
+                href={`/businesses/${sector.slug}`}
+                className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-white/[0.07]"
+              >
+                <div className="relative h-[180px]">
+                  <Image
+                    src={sector.image}
+                    alt={sector.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#080a0e] via-[#080a0e]/45 to-transparent" />
+                  <div className="absolute bottom-4 left-5 flex items-center gap-3">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-gold bg-[#0c0e12]">
+                      <Icon className="h-5 w-5 text-gold" strokeWidth={1.8} />
+                    </div>
+                    <div>
+                      <h2 className="text-[16px] font-black uppercase tracking-wider text-white">
+                        {sector.title}
+                      </h2>
+                      <p className="text-[11px] font-semibold text-gold">
+                        {sector.tagline}
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-          <p className="mt-3 text-[10.5px] lg:text-[12px] leading-relaxed text-white/85">
-            We deal in high-quality animal skins and hides, fresh meat and fish,
-            supporting farmers, communities and the food value chain.
-          </p>
-
-          {/* Product Tag Icons */}
-          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-white/10 pt-2.5">
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <ShoppingBag className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Animal Skins & Hides
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Drumstick className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Meat
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Fish className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Fish
-            </span>
-          </div>
-        </div>
-
-        {/* ── 4. Sector 3 (REAL ESTATE) Card Content (Coded Live Text & Vector Icons) ── */}
-        <div className="absolute top-[51%] left-[69.5%] w-[28.5%] z-20 flex flex-col justify-between">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 lg:h-14 lg:w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#d4941c] bg-[#0c0e12] shadow-lg">
-              <HomeIcon className="h-6 w-6 lg:h-7 lg:w-7 text-[#d4941c]" strokeWidth={2} />
-            </div>
-            <div>
-              <h2 className="text-base lg:text-[20px] font-black uppercase tracking-wider text-white">
-                REAL ESTATE
-              </h2>
-              <p className="text-[12px] lg:text-[13.5px] font-semibold text-[#d4941c]">
-                Property Development & Investment
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-3 text-[10.5px] lg:text-[12px] leading-relaxed text-white/85">
-            We invest in prime properties, develop modern spaces and help our
-            clients achieve long-term value and secure their future.
-          </p>
-
-          {/* Product Tag Icons */}
-          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-white/10 pt-2.5">
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Building2 className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Residential
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Landmark className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Commercial
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <LandPlot className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Land
-            </span>
-            <span className="inline-flex items-center gap-1.5 text-[10.5px] lg:text-[11.5px] font-medium text-white/80">
-              <Handshake className="h-3.5 w-3.5 text-[#d4941c]" strokeWidth={1.75} />
-              Investment
-            </span>
-          </div>
-        </div>
-
-        {/* ── 5. Bottom Core Values Bar (100% Coded Live Text & Vector Icons) ── */}
-        <div className="absolute bottom-0 left-0 right-0 h-[12.8%] z-20 flex items-center justify-between px-6 lg:px-12 divide-x divide-white/10">
-          <div className="flex-1 flex items-center justify-center gap-3 px-3">
-            <div className="flex h-9 w-9 lg:h-10 lg:w-10 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <Handshake className="h-4 w-4 lg:h-5 lg:w-5 text-[#d4941c]" strokeWidth={1.75} />
-            </div>
-            <div>
-              <p className="text-[12px] lg:text-[13px] font-bold text-white">Integrity</p>
-              <p className="text-[10px] lg:text-[11px] text-white/60">We do what is right</p>
-            </div>
-          </div>
-
-          <div className="flex-1 flex items-center justify-center gap-3 px-3">
-            <div className="flex h-9 w-9 lg:h-10 lg:w-10 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <Leaf className="h-4 w-4 lg:h-5 lg:w-5 text-[#d4941c]" strokeWidth={1.75} />
-            </div>
-            <div>
-              <p className="text-[12px] lg:text-[13px] font-bold text-white">Sustainability</p>
-              <p className="text-[10px] lg:text-[11px] text-white/60">For future generations</p>
-            </div>
-          </div>
-
-          <div className="flex-1 flex items-center justify-center gap-3 px-3">
-            <div className="flex h-9 w-9 lg:h-10 lg:w-10 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <Users className="h-4 w-4 lg:h-5 lg:w-5 text-[#d4941c]" strokeWidth={1.75} />
-            </div>
-            <div>
-              <p className="text-[12px] lg:text-[13px] font-bold text-white">Community</p>
-              <p className="text-[10px] lg:text-[11px] text-white/60">Stronger together</p>
-            </div>
-          </div>
-
-          <div className="flex-1 flex items-center justify-center gap-3 px-3">
-            <div className="flex h-9 w-9 lg:h-10 lg:w-10 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <ShieldCheck className="h-4 w-4 lg:h-5 lg:w-5 text-[#d4941c]" strokeWidth={1.75} />
-            </div>
-            <div>
-              <p className="text-[12px] lg:text-[13px] font-bold text-white">Excellence</p>
-              <p className="text-[10px] lg:text-[11px] text-white/60">In everything we do</p>
-            </div>
-          </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <p className="text-[12px] leading-relaxed text-white/70">
+                    {sector.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-white/10 pt-3">
+                    {sector.tags.map((tag) => {
+                      const TagIcon = tag.icon;
+                      return (
+                        <span
+                          key={tag.label}
+                          className="inline-flex items-center gap-1.5 text-[10.5px] font-medium text-white/75"
+                        >
+                          <TagIcon className="h-3.5 w-3.5 text-gold" strokeWidth={1.75} />
+                          {tag.label}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-gold">
+                    EXPLORE {sector.title}
+                    <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 
-      {/* ── MOBILE / TABLET VIEW (< md): Clean, Responsive, Stacked & Legible ── */}
-      <div className="md:hidden flex flex-col bg-[#0c0e12] text-white">
-        {/* Top Headline Section */}
-        <div className="relative bg-[#0c0e12] px-6 py-10 overflow-hidden">
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(120% 100% at 20% 0%, rgba(212,148,28,0.18) 0%, transparent 55%)",
-            }}
-          />
-          <div className="relative">
-            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#f5d76e]">
-              WELCOME TO HEEAF INVESTMENT LIMITED
-            </p>
-            <h1 className="mt-2 font-[family-name:var(--font-heading)] text-[clamp(1.85rem,6vw,2.6rem)] font-black leading-tight text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
-              Connecting Opportunities.{" "}
-              <span className="block text-[#f5d76e]">Delivering Value Across Borders.</span>
-            </h1>
-            <div className="mt-3 h-[3px] w-12 bg-[#f5d76e]" />
-            <p className="mt-3 text-sm leading-relaxed text-white/85 [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
-              We provide quality and affordable solutions in Energy, Agriculture
-              and Real Estate to clients and partners across Africa and beyond.
-            </p>
-          </div>
-        </div>
-
-        {/* Sector 1: Energy */}
-        <div className="border-b border-white/10">
-          <div className="relative h-56 w-full">
-            <Image
-              src="/images/hero-energy-truck-clean.jpg"
-              alt="HEEAF Energy"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6 bg-[#0c0e12]">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#d4941c]">
-                <Droplets className="h-6 w-6 text-[#d4941c]" />
+      {/* Core values bar */}
+      <div className="relative z-10 border-t border-white/10 bg-[#07090c]">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-y-6 px-6 py-8 md:grid-cols-4">
+          {values.map((value) => {
+            const Icon = value.icon;
+            return (
+              <div key={value.title} className="flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold">
+                  <Icon className="h-[18px] w-[18px] text-gold" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <p className="text-[12px] md:text-[13px] font-bold text-white">
+                    {value.title}
+                  </p>
+                  <p className="text-[10px] md:text-[11px] text-white/55">
+                    {value.text}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h2 className="text-lg font-black uppercase text-white">ENERGY</h2>
-                <p className="text-sm font-semibold text-[#d4941c]">Petroleum Products</p>
-              </div>
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-white/70">
-              We supply and trade in quality petroleum products, ensuring reliable
-              energy solutions for homes, businesses and industries.
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3 border-t border-white/10 pt-3">
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Fuel className="h-3.5 w-3.5 text-[#d4941c]" /> Diesel
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Flame className="h-3.5 w-3.5 text-[#d4941c]" /> Petrol
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Droplets className="h-3.5 w-3.5 text-[#d4941c]" /> Lubricants
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Fuel className="h-3.5 w-3.5 text-[#d4941c]" /> Fuel Oils
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Sector 2: Agriculture */}
-        <div className="border-b border-white/10">
-          <div className="relative h-56 w-full">
-            <Image
-              src="/images/hero-agriculture-cows.jpg"
-              alt="HEEAF Agriculture"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6 bg-[#0c0e12]">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#d4941c]">
-                <Leaf className="h-6 w-6 text-[#d4941c]" />
-              </div>
-              <div>
-                <h2 className="text-lg font-black uppercase text-white">AGRICULTURE</h2>
-                <p className="text-sm font-semibold text-[#d4941c]">
-                  Animal Skin, Hides, Meat & Fish
-                </p>
-              </div>
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-white/70">
-              We deal in high-quality animal skins and hides, fresh meat and fish,
-              supporting farmers, communities and the food value chain.
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3 border-t border-white/10 pt-3">
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <ShoppingBag className="h-3.5 w-3.5 text-[#d4941c]" /> Animal Skins & Hides
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Drumstick className="h-3.5 w-3.5 text-[#d4941c]" /> Meat
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Fish className="h-3.5 w-3.5 text-[#d4941c]" /> Fish
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Sector 3: Real Estate */}
-        <div className="border-b border-white/10">
-          <div className="relative h-56 w-full">
-            <Image
-              src="/images/hero-realestate-villa.jpg"
-              alt="HEEAF Real Estate"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6 bg-[#0c0e12]">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#d4941c]">
-                <HomeIcon className="h-6 w-6 text-[#d4941c]" />
-              </div>
-              <div>
-                <h2 className="text-lg font-black uppercase text-white">REAL ESTATE</h2>
-                <p className="text-sm font-semibold text-[#d4941c]">
-                  Property Development & Investment
-                </p>
-              </div>
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-white/70">
-              We invest in prime properties, develop modern spaces and help our
-              clients achieve long-term value and secure their future.
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3 border-t border-white/10 pt-3">
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Building2 className="h-3.5 w-3.5 text-[#d4941c]" /> Residential
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Landmark className="h-3.5 w-3.5 text-[#d4941c]" /> Commercial
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <LandPlot className="h-3.5 w-3.5 text-[#d4941c]" /> Land
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs text-white/80">
-                <Handshake className="h-3.5 w-3.5 text-[#d4941c]" /> Investment
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Core Values Mobile Strip */}
-        <div className="grid grid-cols-2 gap-4 p-6 bg-[#07090c]">
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <Handshake className="h-4 w-4 text-[#d4941c]" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white">Integrity</p>
-              <p className="text-[10px] text-white/50">We do what is right</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <Leaf className="h-4 w-4 text-[#d4941c]" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white">Sustainability</p>
-              <p className="text-[10px] text-white/50">For future generations</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <Users className="h-4 w-4 text-[#d4941c]" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white">Community</p>
-              <p className="text-[10px] text-white/50">Stronger together</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4941c]">
-              <ShieldCheck className="h-4 w-4 text-[#d4941c]" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white">Excellence</p>
-              <p className="text-[10px] text-white/50">In everything we do</p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

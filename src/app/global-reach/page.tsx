@@ -69,7 +69,7 @@ const presenceStats = [
   {
     icon: Building2,
     label: "FOCUSED ON",
-    value: "3 CORE SECTORS",
+    value: "3 COMMODITY SECTORS",
   },
 ];
 
@@ -224,7 +224,7 @@ function GlobalPresence() {
 function ReachAcrossWorld() {
   return (
     <section className="relative overflow-hidden bg-primary-darker bg-grain">
-      <Blob tone="estate" size={460} className="absolute -top-32 -right-24 z-0" opacity={0.18} />
+      <Blob tone="metal" size={460} className="absolute -top-32 -right-24 z-0" opacity={0.18} />
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal variant="left">

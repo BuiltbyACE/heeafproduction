@@ -1,52 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Zap, Leaf, Building2, Gem, CircleCheck } from "lucide-react";
+import { ArrowRight, Zap, Leaf, Gem, CircleCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const sectors = [
+  {
+    slug: "metals",
+    title: "METALS",
+    image: "/images/gold.jpeg",
+    icon: Gem,
+    description:
+      "We source and trade precious and base metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets.",
+    itemsLeft: ["Gold (Precious Metal)"],
+    itemsRight: ["Copper (Base Metal)"],
+    buttonLabel: "EXPLORE METALS",
+  },
+  {
+    slug: "livestock",
+    title: "LIVESTOCK",
+    image: "/images/agriculture-sector.jpg",
+    icon: Leaf,
+    description:
+      "We trade livestock and livestock products — animal skins and hides, meat and fish — with quality, care and efficiency.",
+    itemsLeft: ["Animal Skins & Hides", "Meat"],
+    itemsRight: ["Fish"],
+    buttonLabel: "EXPLORE LIVESTOCK",
+  },
   {
     slug: "energy",
     title: "ENERGY",
     image: "/images/energy-sector.jpg",
     icon: Zap,
     description:
-      "We deal with the purchase and supply of petroleum products and alternative energy solutions that power industries and economies.",
-    itemsLeft: ["Premium Motor Spirit (PMS)", "Automotive Gas Oil (AGO)", "Jet Fuel", "Liquified Petroleum Gas (LPG)"],
-    itemsRight: ["Kerosene", "Crude Oil", "Charcoal Briquettes"],
+      "We trade crude oil and refined petroleum products that power transportation, industry and households.",
+    itemsLeft: ["Crude Oil", "Premium Motor Spirit (PMS)", "Automotive Gas Oil (AGO)"],
+    itemsRight: ["Jet Fuel", "Liquified Petroleum Gas (LPG)", "Kerosene"],
     buttonLabel: "EXPLORE ENERGY",
-  },
-  {
-    slug: "agriculture",
-    title: "AGRICULTURE",
-    image: "/images/agriculture-sector.jpg",
-    icon: Leaf,
-    description:
-      "We purchase and supply a wide range of agricultural products across Africa and internationally with quality, care and efficiency.",
-    itemsLeft: ["Hides & Skins", "Meat & Fish", "Spices"],
-    itemsRight: ["Tea", "Coffee", "And more"],
-    buttonLabel: "EXPLORE AGRICULTURE",
-  },
-  {
-    slug: "real-estate",
-    title: "REAL ESTATE",
-    image: "/images/realestate-sector.jpg",
-    icon: Building2,
-    description:
-      "We are involved in the purchase and sale of property, as well as rentals, delivering value and creating spaces that last.",
-    itemsLeft: ["Property Purchase", "Property Sales"],
-    itemsRight: ["Property Rentals", "Investment Opportunities"],
-    buttonLabel: "EXPLORE REAL ESTATE",
-  },
-  {
-    slug: "metal",
-    title: "METAL",
-    image: "/images/metal-sector.jpg",
-    icon: Gem,
-    description:
-      "We deal in the sourcing and supply of precious and base metals, connecting producers with buyers across regional and international markets.",
-    itemsLeft: ["Gold (Precious Metal)"],
-    itemsRight: ["Copper (Base Metal)"],
-    buttonLabel: "EXPLORE METAL",
   },
 ];
 
@@ -67,9 +56,8 @@ export default function BusinessSectorsCards() {
             <div className="h-[2px] w-6 bg-gold/40" />
           </div>
           <p className="mx-auto mt-4 max-w-[680px] text-[13px] leading-relaxed text-text-dark/65">
-            Driven by integrity and commitment, we provide high-quality products
-            and services across Energy, Agriculture, Real Estate and Metal to
-            clients and partners worldwide.
+            Driven by integrity and commitment, we trade commodities across
+            Metals, Livestock and Energy for clients and partners worldwide.
           </p>
         </Reveal>
 

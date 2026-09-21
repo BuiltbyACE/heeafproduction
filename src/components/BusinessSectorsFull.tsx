@@ -1,104 +1,87 @@
 import Link from "next/link";
 import {
   ArrowRight,
+  Gem,
+  Zap,
+  ShieldCheck,
+  Drumstick,
+  Fish,
+  Container,
   Droplets,
   Fuel,
   Plane,
   Flame,
   Lamp,
-  Container,
-  TreePine,
   Globe,
   Package,
   Truck,
   ThumbsUp,
-  ShieldCheck,
-  ShoppingBag,
-  Handshake,
-  Key,
-  Leaf,
-  Coffee,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Blob from "@/components/Blob";
 import GoldFrame from "@/components/GoldFrame";
 
-const petroleumProducts = [
+const metals = [
+  {
+    icon: Gem,
+    title: "Gold",
+    text: "HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance this precious metal trade demands.",
+  },
+  {
+    icon: Zap,
+    title: "Copper",
+    text: "HEEAF supplies copper cathodes and refined copper products to manufacturers, construction firms and commodity traders who need consistent grade, clean certification and reliable delivery schedules.",
+  },
+];
+
+const livestock = [
+  {
+    icon: ShieldCheck,
+    title: "Animal Skins & Hides",
+    text: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling.",
+  },
+  {
+    icon: Drumstick,
+    title: "Meat",
+    text: "HEEAF works with trusted producers to supply fresh and frozen meat, maintaining hygiene, temperature control and freight speed throughout transit for wholesalers and food processors.",
+  },
+  {
+    icon: Fish,
+    title: "Fish",
+    text: "HEEAF sources and supplies fresh and frozen fish, managing cold-chain handling, packaging and logistics so that product reaches buyers in optimal condition.",
+  },
+];
+
+const energy = [
+  {
+    icon: Container,
+    title: "Crude Oil",
+    text: "HEEAF facilitates sourcing and supply arrangements for crude oil, connecting producers with refiners and industrial buyers through transparent, timely and compliant transactions.",
+  },
   {
     icon: Droplets,
     title: "Premium Motor Spirit (PMS)",
-    text: "HEEAF supplies Premium Motor Spirit as part of its petroleum product portfolio. PMS is a widely used fuel product and forms a core part of the company's energy supply activities.",
+    text: "HEEAF supplies Premium Motor Spirit that meets strict quality benchmarks, ensuring clean combustion and consistent performance for fuel stations, fleets and bulk distributors.",
   },
   {
     icon: Fuel,
     title: "Automotive Gas Oil (AGO)",
-    text: "Automotive Gas Oil is included in HEEAF's range of petroleum products. The company is involved in the purchase and supply of AGO to meet the energy needs of its clients and partners.",
+    text: "HEEAF supplies diesel to haulage companies, construction firms, agricultural operations and power providers who need dependable fuel and punctual, scheduled deliveries.",
   },
   {
     icon: Plane,
     title: "Jet Fuel",
-    text: "Jet Fuel is part of HEEAF's energy product offering. The company supplies jet fuel as part of its participation in the petroleum products market.",
+    text: "HEEAF supplies jet fuel that meets international aviation safety and quality standards, working with certified depots and inspection protocols at every stage of handling.",
   },
   {
     icon: Flame,
-    title: "Liquefied Petroleum Gas (LPG)",
-    text: "HEEAF supplies Liquefied Petroleum Gas as part of its portfolio. LPG is an important energy product and the company is involved in its purchase and supply.",
+    title: "Liquified Petroleum Gas (LPG)",
+    text: "HEEAF supplies LPG in bulk and cylinder form to distributors, households and businesses, with handling protocols that prioritize cylinder integrity, leak-testing and safe storage.",
   },
   {
     icon: Lamp,
     title: "Kerosene",
-    text: "Kerosene forms part of HEEAF's petroleum product range. The company participates in the supply of kerosene to clients and partners across its markets.",
-  },
-  {
-    icon: Container,
-    title: "Crude Oil",
-    text: "HEEAF is also involved in the supply of crude oil. Crude oil is included in the company's energy business portfolio as part of its petroleum product activities.",
-  },
-];
-
-const sdgGoals = [
-  {
-    number: "7",
-    title: "Affordable and Clean Energy",
-    text: "HEEAF's charcoal briquettes support the goal of providing more affordable energy solutions. As part of its green energy initiative, the company contributes to expanding access to cleaner alternatives.",
-  },
-  {
-    number: "13",
-    title: "Climate Action",
-    text: "Through the production of charcoal briquettes, HEEAF supports efforts toward climate action by offering an alternative energy product that aligns with environmental responsibility.",
-  },
-];
-
-const agriProducts = [
-  {
-    icon: ShieldCheck,
-    title: "Hides & Skins",
-    text: "HEEAF purchases and supplies hides and skins as part of its agricultural product portfolio. The company handles these products with attention to quality and proper packaging standards.",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Meat",
-    text: "HEEAF is involved in the supply of meat products to its clients and partners. The company ensures quality handling and delivery as part of its agricultural activities.",
-  },
-  {
-    icon: Globe,
-    title: "Fish",
-    text: "HEEAF purchases and supplies fish products. The company includes fish in its range of agricultural products offered to clients across its markets.",
-  },
-  {
-    icon: Leaf,
-    title: "Spices",
-    text: "HEEAF supplies spices as part of its agricultural product offering. The company sources and delivers spices to meet the needs of its clients and partners.",
-  },
-  {
-    icon: TreePine,
-    title: "Tea",
-    text: "HEEAF purchases and supplies tea products. Tea is included in the company's agricultural portfolio as part of its supply activities across Africa and internationally.",
-  },
-  {
-    icon: Coffee,
-    title: "Coffee",
-    text: "HEEAF purchases and supplies coffee products. The company is involved in the supply of coffee as part of its agricultural product range.",
+    text: "HEEAF ensures a steady, quality-checked kerosene supply chain reaching both urban distributors and underserved markets where grid power or gas infrastructure is limited.",
   },
 ];
 
@@ -106,50 +89,32 @@ const supplyPillars = [
   {
     icon: Globe,
     title: "Worldwide Supply",
-    text: "HEEAF can supply agricultural products worldwide. The company works with clients and partners across Africa and internationally to deliver products to their required destinations.",
+    text: "HEEAF supplies commodities worldwide, working with clients and partners across Africa and internationally to deliver products to their required destinations.",
   },
   {
     icon: Package,
     title: "Quality & Packaging",
-    text: "HEEAF places emphasis on quality and sound and effective packaging. The company ensures that agricultural products are handled and packaged to maintain their condition throughout the supply process.",
+    text: "HEEAF places emphasis on quality and sound, effective packaging so that commodities are handled and protected throughout the supply process.",
   },
   {
     icon: Truck,
     title: "Efficient Delivery",
-    text: "HEEAF works with fast and efficient shipping companies to ensure goods reach their expected destinations within the stipulated period. Timely delivery is a key part of the company's service.",
+    text: "HEEAF works with fast and efficient shipping companies to ensure goods reach their expected destinations within the stipulated period.",
   },
   {
     icon: ThumbsUp,
     title: "Customer Satisfaction",
-    text: "Customer satisfaction and business fidelity are central to HEEAF's agricultural operations. The company is committed to meeting the expectations of its clients and partners.",
-  },
-];
-
-const realEstateActivities = [
-  {
-    icon: ShoppingBag,
-    title: "Property Purchase",
-    text: "HEEAF Investment Limited is involved in the purchase of property. The company participates in property acquisition as part of its real estate activities, identifying opportunities that align with its business objectives.",
-  },
-  {
-    icon: Handshake,
-    title: "Property Sale",
-    text: "HEEAF is involved in the sale of property. The company engages in property sales as part of its real estate operations, delivering value to clients and partners through its market knowledge and transactions.",
-  },
-  {
-    icon: Key,
-    title: "Property Rentals",
-    text: "HEEAF operates in the property rental space. The company is involved in rentals as part of its real estate portfolio, providing opportunities for clients and partners seeking rental solutions.",
+    text: "Customer satisfaction and business fidelity are central to HEEAF's commodity operations. We are committed to meeting the expectations of our clients and partners.",
   },
 ];
 
 /** Large faint Playfair numeral used as an editorial watermark behind sector intro blocks. */
-function SectorNumeral({ n, tone }: { n: string; tone: "gold" | "energy" | "agri" | "estate" }) {
+function SectorNumeral({ n, tone }: { n: string; tone: "gold" | "metal" | "agri" | "energy" }) {
   const toneClass = {
     gold: "text-gold/10",
-    energy: "text-energy/10",
+    metal: "text-metal/15",
     agri: "text-agri/15",
-    estate: "text-estate/15",
+    energy: "text-energy/10",
   }[tone];
   return (
     <span
@@ -161,59 +126,56 @@ function SectorNumeral({ n, tone }: { n: string; tone: "gold" | "energy" | "agri
   );
 }
 
-const cardToneRing: Record<"energy" | "agri" | "estate", string> = {
-  energy: "hover:border-energy/50 hover:shadow-energy/15",
+const cardToneRing: Record<"metal" | "agri" | "energy", string> = {
+  metal: "hover:border-metal/50 hover:shadow-metal/15",
   agri: "hover:border-agri/50 hover:shadow-agri/15",
-  estate: "hover:border-estate/50 hover:shadow-estate/15",
+  energy: "hover:border-energy/50 hover:shadow-energy/15",
 };
 
-function EnergySection() {
+function MetalsSection() {
   return (
     <section className="relative overflow-hidden bg-primary-darker bg-grain">
-      <Blob tone="energy" size={520} className="absolute -top-40 -right-40 z-0" opacity={0.28} />
-      <SectorNumeral n="01" tone="energy" />
+      <Blob tone="metal" size={520} className="absolute -top-40 -right-40 z-0" opacity={0.28} />
+      <SectorNumeral n="01" tone="metal" />
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal variant="left">
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
-                OUR BUSINESS SECTORS
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-metal">
+                COMMODITY TRADE
               </span>
               <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-white leading-snug">
-                ENERGY
+                METALS
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-white/80">
-                Powering Access Through Energy Solutions
+                Precious and Base Metals
               </p>
-              <div className="mt-4 h-[3px] w-16 bg-energy" />
+              <div className="mt-4 h-[3px] w-16 bg-metal" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF Investment Limited operates in the energy sector through the
-                purchase and supply of petroleum products. Through this business
-                area, the company participates in the movement and supply of
-                essential energy products to meet the needs of its clients and
-                partners across Africa and beyond.
+                HEEAF Investment Limited trades metals as part of its commodity
+                business, sourcing and supplying precious and base metals to
+                buyers across regional and international markets.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF&apos;s energy portfolio includes a range of petroleum products
-                that serve critical roles in transportation, industry, and daily
-                energy needs. The company is also expanding into alternative energy
-                solutions through its green energy initiative, demonstrating a
-                commitment to providing more sustainable and affordable energy
-                options.
+                From gold, a store of value and industrial input, to copper, the
+                backbone of modern infrastructure, our metals portfolio connects
+                mining producers with refiners, manufacturers and traders. We
+                manage grading, assaying, documentation and cross-border
+                logistics with the compliance this trade demands.
               </p>
               <Link
-                href="/contact"
-                className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-energy px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
+                href="/businesses/metals"
+                className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-metal px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
               >
-                TALK TO OUR ENERGY TEAM
+                EXPLORE METALS
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </Reveal>
           <Reveal delay={120} variant="right">
             <GoldFrame
-              src="/images/energy-sector.jpg"
-              alt="HEEAF Energy — petroleum products and energy solutions"
+              src="/images/gold.jpeg"
+              alt="HEEAF Metals — gold and copper commodity trading"
               width={880}
               height={620}
               fill={false}
@@ -225,44 +187,39 @@ function EnergySection() {
   );
 }
 
-function PetroleumProductsSection() {
+function MetalsGridSection() {
   return (
     <section className="bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <Reveal className="text-center">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
-            ENERGY PORTFOLIO
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-metal">
+            METALS PORTFOLIO
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            PETROLEUM PRODUCTS
+            OUR METALS
           </h2>
           <div className="mx-auto mt-3 flex items-center gap-2">
-            <div className="h-[2px] w-6 bg-energy/40" />
-            <div className="h-2 w-2 rotate-45 bg-energy" />
-            <div className="h-[2px] w-6 bg-energy/40" />
+            <div className="h-[2px] w-6 bg-metal/40" />
+            <div className="h-2 w-2 rotate-45 bg-metal" />
+            <div className="h-[2px] w-6 bg-metal/40" />
           </div>
-          <p className="mx-auto mt-4 max-w-[640px] text-[13px] leading-relaxed text-text-dark/65">
-            HEEAF&apos;s energy portfolio comprises essential petroleum products that
-            serve transportation, industrial, and domestic energy needs across
-            the company&apos;s markets.
-          </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {petroleumProducts.map((product, i) => {
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+          {metals.map((product, i) => {
             const Icon = product.icon;
             return (
               <Reveal key={product.title} delay={i * 80} variant="scale">
                 <div
-                  className={`group flex flex-col rounded-lg border border-gold/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${cardToneRing.energy}`}
+                  className={`group flex flex-col rounded-lg border border-gold/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${cardToneRing.metal}`}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-energy bg-gradient-to-br from-energy/15 to-transparent transition-transform duration-300 group-hover:scale-110">
-                    <Icon className="h-5 w-5 text-energy" strokeWidth={1.5} />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-metal bg-gradient-to-br from-metal/15 to-transparent transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-5 w-5 text-metal" strokeWidth={1.5} />
                   </div>
                   <h3 className="mt-4 text-[13px] font-bold uppercase tracking-wider text-text-dark">
                     {product.title}
                   </h3>
-                  <div className="mt-2 h-[2px] w-8 bg-energy" />
+                  <div className="mt-2 h-[2px] w-8 bg-metal" />
                   <p className="mt-3 text-[12px] leading-relaxed text-text-dark/65">
                     {product.text}
                   </p>
@@ -276,78 +233,7 @@ function PetroleumProductsSection() {
   );
 }
 
-function CharcoalBriquettesSection() {
-  return (
-    <section className="relative overflow-hidden bg-primary-darker bg-grain">
-      <Blob tone="energy" size={420} className="absolute -bottom-32 -left-32 z-0" opacity={0.22} />
-      <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-16 md:py-20">
-        <div className="grid items-start gap-12 lg:grid-cols-2">
-          <Reveal variant="left">
-            <GoldFrame
-              src="/images/energy-photo.jpg"
-              alt="HEEAF charcoal briquettes — green energy initiative"
-              width={880}
-              height={620}
-              fill={false}
-            />
-          </Reveal>
-          <Reveal delay={120} variant="right">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
-                GREEN ENERGY INITIATIVE
-              </span>
-              <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-white leading-snug">
-                CHARCOAL BRIQUETTES
-              </h2>
-              <div className="mt-4 h-[3px] w-16 bg-energy" />
-              <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                In addition to its petroleum product portfolio, HEEAF produces
-                charcoal briquettes as part of its green energy initiative. This
-                initiative supports the company&apos;s goal of providing more
-                affordable green energy solutions to its clients and partners.
-              </p>
-              <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                Charcoal briquettes represent HEEAF&apos;s commitment to exploring
-                alternative energy products that offer practical and accessible
-                energy options. Through this initiative, the company contributes
-                to broader efforts toward sustainable energy access.
-              </p>
-
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                {sdgGoals.map((goal, i) => (
-                  <Reveal key={goal.number} delay={i * 100} variant="scale">
-                    <div className="rounded-lg border border-energy/20 bg-white/5 p-5 transition-colors duration-300 hover:border-energy/40 hover:bg-white/[0.08]">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-energy bg-gradient-to-br from-energy/25 to-transparent">
-                          <span className="text-[14px] font-bold text-energy">
-                            {goal.number}
-                          </span>
-                        </div>
-                        <div>
-                          <p className="text-[10px] font-bold uppercase tracking-wider text-energy">
-                            SDG {goal.number}
-                          </p>
-                          <p className="text-[12px] font-semibold text-white">
-                            {goal.title}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="mt-3 text-[12px] leading-relaxed text-white/65">
-                        {goal.text}
-                      </p>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function AgricultureSection() {
+function LivestockSection() {
   return (
     <section className="relative overflow-hidden bg-white">
       <Blob tone="agri" size={520} className="absolute -top-40 -left-40 z-0" opacity={0.22} />
@@ -357,42 +243,40 @@ function AgricultureSection() {
           <Reveal variant="left">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-agri">
-                OUR BUSINESS SECTORS
+                COMMODITY TRADE
               </span>
               <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-text-dark leading-snug">
-                AGRICULTURE
+                LIVESTOCK
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-text-dark/80">
-                Connecting Quality Agricultural Products to Markets
+                Animal Skins, Hides, Meat &amp; Fish
               </p>
               <div className="mt-4 h-[3px] w-16 bg-agri" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
-                HEEAF Investment Limited is involved in the purchase and supply
-                of agricultural products within and outside Africa. The company
-                provides a range of agricultural products to clients and partners,
-                with emphasis on quality, sound and effective packaging, efficient
-                delivery and customer satisfaction.
+                HEEAF Investment Limited trades livestock and livestock products
+                within and outside Africa, providing a dependable route to market
+                for producers and a reliable source for processors, wholesalers
+                and international buyers.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
-                HEEAF&apos;s agricultural business spans multiple product categories,
-                from hides and skins to tea and coffee. The company works to
-                connect producers with markets, ensuring that products are handled
-                with care and delivered efficiently to meet client expectations
-                across Africa and internationally.
+                Our livestock portfolio covers animal skins and hides for the
+                leather and textile industries, as well as meat and fish for the
+                food value chain. We emphasize quality handling, cold-chain
+                integrity, sound packaging and efficient delivery.
               </p>
               <Link
-                href="/contact"
+                href="/businesses/livestock"
                 className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-agri px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
               >
-                EXPLORE AGRICULTURE
+                EXPLORE LIVESTOCK
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </Reveal>
           <Reveal delay={120} variant="right">
             <GoldFrame
-              src="/images/agriculture-sector.jpg"
-              alt="HEEAF Agriculture — agricultural products and supply"
+              src="/images/agriculture-photo.jpg"
+              alt="HEEAF Livestock — animal skins, hides, meat and fish"
               width={880}
               height={620}
               fill={false}
@@ -404,31 +288,26 @@ function AgricultureSection() {
   );
 }
 
-function AgriProductsSection() {
+function LivestockGridSection() {
   return (
     <section className="bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <Reveal className="text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-agri">
-            AGRICULTURAL PORTFOLIO
+            LIVESTOCK PORTFOLIO
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            OUR AGRICULTURAL PRODUCTS
+            OUR LIVESTOCK PRODUCTS
           </h2>
           <div className="mx-auto mt-3 flex items-center gap-2">
             <div className="h-[2px] w-6 bg-agri/40" />
             <div className="h-2 w-2 rotate-45 bg-agri" />
             <div className="h-[2px] w-6 bg-agri/40" />
           </div>
-          <p className="mx-auto mt-4 max-w-[640px] text-[13px] leading-relaxed text-text-dark/65">
-            HEEAF supplies a diverse range of agricultural products to clients
-            and partners, maintaining quality standards across its entire
-            portfolio.
-          </p>
         </Reveal>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {agriProducts.map((product, i) => {
+          {livestock.map((product, i) => {
             const Icon = product.icon;
             return (
               <Reveal key={product.title} delay={i * 80} variant="scale">
@@ -455,44 +334,95 @@ function AgriProductsSection() {
   );
 }
 
-function SupplyLogisticsSection() {
+function EnergySection() {
   return (
-    <section className="bg-white">
+    <section className="relative overflow-hidden bg-primary-darker bg-grain">
+      <Blob tone="energy" size={520} className="absolute -top-40 -right-40 z-0" opacity={0.28} />
+      <SectorNumeral n="03" tone="energy" />
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-16 md:py-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <Reveal variant="left">
+            <GoldFrame
+              src="/images/energy-photo.jpg"
+              alt="HEEAF Energy — crude oil and refined petroleum products"
+              width={880}
+              height={620}
+              fill={false}
+            />
+          </Reveal>
+          <Reveal delay={120} variant="right">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
+                COMMODITY TRADE
+              </span>
+              <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-white leading-snug">
+                ENERGY
+              </h2>
+              <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-white/80">
+                Crude Oil &amp; Petroleum Products
+              </p>
+              <div className="mt-4 h-[3px] w-16 bg-energy" />
+              <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
+                HEEAF Investment Limited trades energy commodities through the
+                sourcing and supply of crude oil and refined petroleum products,
+                meeting the needs of industry, transportation and households.
+              </p>
+              <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
+                Our energy portfolio spans crude oil, PMS, AGO, jet fuel, LPG and
+                kerosene. We coordinate market intelligence, logistics and
+                contract facilitation to ensure transparent, timely and compliant
+                transactions.
+              </p>
+              <Link
+                href="/businesses/energy"
+                className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-energy px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
+              >
+                EXPLORE ENERGY
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EnergyGridSection() {
+  return (
+    <section className="bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <Reveal className="text-center">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-agri">
-            GLOBAL SUPPLY
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
+            ENERGY PORTFOLIO
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            SUPPLY &amp; LOGISTICS
+            OUR ENERGY COMMODITIES
           </h2>
           <div className="mx-auto mt-3 flex items-center gap-2">
-            <div className="h-[2px] w-6 bg-agri/40" />
-            <div className="h-2 w-2 rotate-45 bg-agri" />
-            <div className="h-[2px] w-6 bg-agri/40" />
+            <div className="h-[2px] w-6 bg-energy/40" />
+            <div className="h-2 w-2 rotate-45 bg-energy" />
+            <div className="h-[2px] w-6 bg-energy/40" />
           </div>
-          <p className="mx-auto mt-4 max-w-[640px] text-[13px] leading-relaxed text-text-dark/65">
-            HEEAF can supply agricultural products worldwide, working with fast
-            and efficient shipping companies to ensure goods reach their expected
-            destinations within the stipulated period.
-          </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {supplyPillars.map((pillar, i) => {
-            const Icon = pillar.icon;
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {energy.map((product, i) => {
+            const Icon = product.icon;
             return (
-              <Reveal key={pillar.title} delay={i * 80} variant="scale">
-                <div className="group flex flex-col items-center text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-agri bg-gradient-to-br from-agri/15 to-transparent transition-transform duration-300 group-hover:scale-110">
-                    <Icon className="h-6 w-6 text-agri" strokeWidth={1.5} />
+              <Reveal key={product.title} delay={i * 80} variant="scale">
+                <div
+                  className={`group flex flex-col rounded-lg border border-gold/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${cardToneRing.energy}`}
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-energy bg-gradient-to-br from-energy/15 to-transparent transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-5 w-5 text-energy" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mt-4 text-[12px] font-bold uppercase tracking-wider text-text-dark">
-                    {pillar.title}
+                  <h3 className="mt-4 text-[13px] font-bold uppercase tracking-wider text-text-dark">
+                    {product.title}
                   </h3>
-                  <div className="mx-auto mt-2 h-[2px] w-8 bg-agri" />
-                  <p className="mt-3 max-w-[240px] text-[12px] leading-relaxed text-text-dark/65">
-                    {pillar.text}
+                  <div className="mt-2 h-[2px] w-8 bg-energy" />
+                  <p className="mt-3 text-[12px] leading-relaxed text-text-dark/65">
+                    {product.text}
                   </p>
                 </div>
               </Reveal>
@@ -504,98 +434,44 @@ function SupplyLogisticsSection() {
   );
 }
 
-function RealEstateSection() {
+function SupplyLogisticsSection() {
   return (
-    <section className="relative overflow-hidden bg-primary-darker bg-grain">
-      <Blob tone="estate" size={520} className="absolute -bottom-40 -right-40 z-0" opacity={0.26} />
-      <SectorNumeral n="03" tone="estate" />
-      <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-16 md:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <Reveal variant="left">
-            <GoldFrame
-              src="/images/realestate-sector.jpg"
-              alt="HEEAF Real Estate — property purchase, sale and rentals"
-              width={880}
-              height={620}
-              fill={false}
-            />
-          </Reveal>
-          <Reveal delay={120} variant="right">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-estate">
-                OUR BUSINESS SECTORS
-              </span>
-              <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-white leading-snug">
-                REAL ESTATE
-              </h2>
-              <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-white/80">
-                Creating Opportunities Through Property
-              </p>
-              <div className="mt-4 h-[3px] w-16 bg-estate" />
-              <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF Investment Limited operates in the real estate sector, with
-                activities focused on the purchase and sale of property as well as
-                rentals. Through this business area, the company participates in
-                property transactions that deliver value to its clients and
-                partners.
-              </p>
-              <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF&apos;s real estate activities span three core areas: property
-                acquisition, property sales, and property rentals. The company
-                approaches each area with a focus on creating lasting value and
-                identifying opportunities that serve the interests of its clients
-                and partners.
-              </p>
-              <Link
-                href="/contact"
-                className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-estate px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
-              >
-                CONTACT OUR REAL ESTATE TEAM
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function RealEstateActivitiesSection() {
-  return (
-    <section className="bg-cream">
+    <section className="bg-white">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <Reveal className="text-center">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-estate">
-            REAL ESTATE ACTIVITIES
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold">
+            GLOBAL SUPPLY
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            OUR REAL ESTATE ACTIVITIES
+            SUPPLY &amp; LOGISTICS
           </h2>
           <div className="mx-auto mt-3 flex items-center gap-2">
-            <div className="h-[2px] w-6 bg-estate/40" />
-            <div className="h-2 w-2 rotate-45 bg-estate" />
-            <div className="h-[2px] w-6 bg-estate/40" />
+            <div className="h-[2px] w-6 bg-gold/40" />
+            <div className="h-2 w-2 rotate-45 bg-gold" />
+            <div className="h-[2px] w-6 bg-gold/40" />
           </div>
+          <p className="mx-auto mt-4 max-w-[640px] text-[13px] leading-relaxed text-text-dark/65">
+            HEEAF can supply commodities worldwide, working with fast and
+            efficient shipping companies to ensure goods reach their expected
+            destinations within the stipulated period.
+          </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {realEstateActivities.map((activity, i) => {
-            const Icon = activity.icon;
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {supplyPillars.map((pillar, i) => {
+            const Icon = pillar.icon;
             return (
-              <Reveal key={activity.title} delay={i * 100} variant="scale">
-                <div
-                  className={`group flex flex-col rounded-lg border border-gold/10 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${cardToneRing.estate}`}
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-estate bg-gradient-to-br from-estate/15 to-transparent transition-transform duration-300 group-hover:scale-110">
-                    <Icon className="h-6 w-6 text-estate" strokeWidth={1.5} />
+              <Reveal key={pillar.title} delay={i * 80} variant="scale">
+                <div className="group flex flex-col items-center text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold bg-gradient-to-br from-gold/15 to-transparent transition-transform duration-300 group-hover:scale-110">
+                    <Icon className="h-6 w-6 text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mt-5 font-[family-name:var(--font-heading)] text-[16px] font-bold text-text-dark">
-                    {activity.title}
+                  <h3 className="mt-4 text-[12px] font-bold uppercase tracking-wider text-text-dark">
+                    {pillar.title}
                   </h3>
-                  <div className="mt-2 h-[2px] w-10 bg-estate" />
-                  <p className="mt-4 text-[13px] leading-relaxed text-text-dark/70">
-                    {activity.text}
+                  <div className="mx-auto mt-2 h-[2px] w-8 bg-gold" />
+                  <p className="mt-3 max-w-[240px] text-[12px] leading-relaxed text-text-dark/65">
+                    {pillar.text}
                   </p>
                 </div>
               </Reveal>
@@ -610,14 +486,13 @@ function RealEstateActivitiesSection() {
 export default function BusinessSectorsFull() {
   return (
     <>
+      <MetalsSection />
+      <MetalsGridSection />
+      <LivestockSection />
+      <LivestockGridSection />
       <EnergySection />
-      <PetroleumProductsSection />
-      <CharcoalBriquettesSection />
-      <AgricultureSection />
-      <AgriProductsSection />
+      <EnergyGridSection />
       <SupplyLogisticsSection />
-      <RealEstateSection />
-      <RealEstateActivitiesSection />
     </>
   );
 }

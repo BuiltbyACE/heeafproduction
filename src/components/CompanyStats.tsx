@@ -23,7 +23,7 @@ const stats = [
   {
     icon: Handshake,
     label: "FOCUSED ON",
-    value: "3 CORE SECTORS",
+    value: "3 COMMODITY SECTORS",
   },
 ];
 

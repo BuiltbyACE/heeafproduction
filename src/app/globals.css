@@ -8,14 +8,9 @@
   --color-cream: #F7F4F0;
   --color-text-dark: #2B2117;
 
-  --color-energy: #E0791C;
-  --color-energy-deep: #8C4A0F;
-  --color-agri: #8A7A2E;
-  --color-agri-deep: #55491A;
-  --color-estate: #A9672E;
-  --color-estate-deep: #6B4019;
   --color-metal: #8B8F98;
-  --color-metal-deep: #45484F;
+  --color-agri: #8A7A2E;
+  --color-energy: #E0791C;
 
   --font-heading: var(--font-playfair);
   --font-body: var(--font-montserrat);

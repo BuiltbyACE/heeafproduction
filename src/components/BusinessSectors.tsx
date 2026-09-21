@@ -13,9 +13,8 @@ export default function BusinessSectors() {
           </h2>
           <div className="mx-auto mt-3 h-[3px] w-16 bg-gold" />
           <p className="mt-4 text-[13px] leading-relaxed text-text-dark/70">
-            Driven by integrity and commitment, we provide high-quality products
-            and services across Energy, Agriculture and Real Estate to clients
-            and partners worldwide.
+            Driven by integrity and commitment, we trade commodities across
+            Metals, Livestock and Energy for clients and partners worldwide.
           </p>
         </div>
 

@@ -1,9 +1,8 @@
 const tones = {
   gold: { from: "#E0A51A", to: "#C8901E" },
-  energy: { from: "#F0954A", to: "#8C4A0F" },
-  agri: { from: "#B4A24A", to: "#55491A" },
-  estate: { from: "#C98A52", to: "#6B4019" },
   metal: { from: "#B7BBC3", to: "#45484F" },
+  agri: { from: "#B4A24A", to: "#55491A" },
+  energy: { from: "#F0954A", to: "#8C4A0F" },
 } as const;
 
 export type BlobTone = keyof typeof tones;

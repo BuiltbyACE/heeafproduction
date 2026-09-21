@@ -6,12 +6,12 @@ const items = [
   {
     icon: Target,
     title: "MISSION",
-    text: "To ease accessibility and deliver affordable high-quality energy, agricultural and real estate products and services to our clients, while upholding integrity.",
+    text: "To ease accessibility and deliver quality commodities — metals, livestock and energy — to our clients, while upholding integrity.",
   },
   {
     icon: Eye,
     title: "VISION",
-    text: "To be a global beacon of relief in the energy, agricultural and real estate sector, where our customers and partners smile as they interact with us.",
+    text: "To be a global beacon of trust in commodity trade, where our customers and partners smile as they interact with us.",
   },
   {
     icon: UserRound,
