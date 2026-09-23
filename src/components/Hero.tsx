@@ -91,8 +91,9 @@ export default function Hero() {
           <div className="mt-5 h-[3px] w-16 bg-gold" />
           <p className="mt-5 max-w-[560px] text-[13px] md:text-[15px] leading-relaxed text-white/80">
             HEEAF Investment Limited is a commodity trading company. We source,
-            trade and supply commodities — precious metals and livestock —
-            connecting producers with buyers across Africa and beyond.
+            trade and supply commodities — precious metals and livestock hides
+            and skins — connecting producers with buyers across Africa and
+            beyond.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
