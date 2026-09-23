@@ -10,9 +10,9 @@ const sectors = [
     image: "/images/gold.jpeg",
     icon: Gem,
     description:
-      "We source and trade precious metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets.",
-    itemsLeft: ["Gold (Precious Metal)"],
-    itemsRight: ["Copper (Base Metal)"],
+      "We source and trade gold, copper, diamonds and tantalite — largely in partnership with specialised companies.",
+    itemsLeft: ["Gold (Precious Metal)", "Diamonds"],
+    itemsRight: ["Copper (Base Metal)", "Tantalite"],
     buttonLabel: "EXPLORE PRECIOUS METALS",
   },
   {

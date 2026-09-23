@@ -9,6 +9,8 @@ import {
   Handshake,
   Leaf,
   Users,
+  Diamond,
+  Cpu,
 } from "lucide-react";
 
 type Sector = {
@@ -27,12 +29,14 @@ const sectors: Sector[] = [
     title: "PRECIOUS METALS",
     tagline: "Precious Metals",
     description:
-      "We source and trade precious metals, connecting mining producers with refiners, manufacturers and buyers worldwide.",
+      "We source and trade gold, copper, diamonds and tantalite — largely in partnership with specialised companies — connecting producers with buyers worldwide.",
     image: "/images/gold.jpeg",
     icon: Gem,
     tags: [
       { label: "Gold", icon: Gem },
       { label: "Copper", icon: Zap },
+      { label: "Diamonds", icon: Diamond },
+      { label: "Tantalite", icon: Cpu },
     ],
   },
   {

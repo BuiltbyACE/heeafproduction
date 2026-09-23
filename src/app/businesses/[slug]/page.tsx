@@ -107,27 +107,27 @@ export default async function BusinessPage({ params }: Props) {
                 <h3 className={`mt-6 text-[11px] font-bold uppercase tracking-wider ${s.text}`}>
                   {biz.itemsLabel}
                 </h3>
-                {biz.itemImages ? (
-                  <div className="mt-4 grid grid-cols-2 gap-4">
-                    {biz.items.map((item) => {
-                      const img = biz.itemImages![item];
-                      return img ? (
-                        <div key={item} className="overflow-hidden rounded-lg border border-black/5">
-                          <img
-                            src={img}
-                            alt={item}
-                            className="h-[140px] w-full object-cover"
-                          />
-                          <div className="px-3 py-2">
-                            <span className="text-[12px] font-semibold text-text-dark">{item}</span>
-                          </div>
+                <div className="mt-4 grid grid-cols-2 gap-4">
+                  {biz.items.map((item) => {
+                    const img = biz.itemImages?.[item];
+                    return img ? (
+                      <div key={item} className="overflow-hidden rounded-lg border border-black/5">
+                        <img
+                          src={img}
+                          alt={item}
+                          className="h-[140px] w-full object-cover"
+                        />
+                        <div className="px-3 py-2">
+                          <span className="text-[12px] font-semibold text-text-dark">{item}</span>
                         </div>
-                      ) : null;
-                    })}
-                  </div>
-                ) : (
-                  <ul className="mt-3 flex flex-col gap-2">
-                    {biz.items.map((item) => (
+                      </div>
+                    ) : null;
+                  })}
+                </div>
+                <ul className="mt-3 flex flex-col gap-2">
+                  {biz.items
+                    .filter((item) => !biz.itemImages?.[item])
+                    .map((item) => (
                       <li
                         key={item}
                         className="flex items-center gap-2 text-[13px] text-text-dark/75"
@@ -136,8 +136,7 @@ export default async function BusinessPage({ params }: Props) {
                         {item}
                       </li>
                     ))}
-                  </ul>
-                )}
+                </ul>
                 <Link
                   href="/contact"
                   className={`btn-shine mt-6 inline-flex h-[42px] items-center gap-2 rounded px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all ${s.button}`}

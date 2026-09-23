@@ -8,6 +8,8 @@ import {
   Package,
   Truck,
   ThumbsUp,
+  Diamond,
+  Cpu,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Blob from "@/components/Blob";
@@ -23,6 +25,16 @@ const metals = [
     icon: Zap,
     title: "Copper",
     text: "HEEAF supplies copper cathodes and refined copper products to manufacturers, construction firms and commodity traders who need consistent grade, clean certification and reliable delivery schedules.",
+  },
+  {
+    icon: Diamond,
+    title: "Diamonds",
+    text: "HEEAF sources and supplies rough and polished diamonds in partnership with certified dealers and partner companies, ensuring provenance, grading and compliance throughout the trade.",
+  },
+  {
+    icon: Cpu,
+    title: "Tantalite",
+    text: "HEEAF facilitates the supply of tantalite ore — the source of tantalum used across modern electronics — working with partner mining operations and processors to deliver certified, traceable material.",
   },
 ];
 
@@ -95,20 +107,22 @@ function MetalsSection() {
                 PRECIOUS METALS
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-white/80">
-                Gold &amp; Copper
+                Gold, Copper, Diamonds &amp; Tantalite
               </p>
               <div className="mt-4 h-[3px] w-16 bg-metal" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF Investment Limited trades precious metals as part of its
-                commodity business, sourcing and supplying precious metals to
-                buyers across regional and international markets.
+                HEEAF Investment Limited trades precious metals — gold, copper,
+                diamonds and tantalite — largely in partnership with specialised
+                companies, sourcing and supplying to buyers across regional and
+                international markets.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                From gold, a store of value and industrial input, to copper, the
-                backbone of modern infrastructure, our precious metals portfolio
-                connects mining producers with refiners, manufacturers and
-                traders. We manage grading, assaying, documentation and
-                cross-border logistics with the compliance this trade demands.
+                From gold and diamonds, coveted stores of value, to copper and
+                tantalite, the materials powering modern industry and
+                electronics, our precious metals portfolio connects producers
+                with refiners, manufacturers and traders. Grading, documentation
+                and cross-border logistics are managed with the compliance this
+                trade demands.
               </p>
               <Link
                 href="/businesses/metals"
@@ -122,7 +136,7 @@ function MetalsSection() {
           <Reveal delay={120} variant="right">
             <GoldFrame
               src="/images/gold.jpeg"
-              alt="HEEAF Precious Metals — gold and copper commodity trading"
+              alt="HEEAF Precious Metals — gold, copper, diamonds and tantalite commodity trading"
               width={880}
               height={620}
               fill={false}

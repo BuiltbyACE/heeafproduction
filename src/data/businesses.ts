@@ -20,9 +20,9 @@ export const businesses: Business[] = [
     slug: "metals",
     title: "PRECIOUS METALS",
     description:
-      "We source and trade precious metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets with attention to grade, purity and timely delivery.",
+      "We source and trade precious metals — gold, copper, diamonds and tantalite — largely in partnership with specialised companies, connecting producers with refiners, manufacturers and buyers across regional and international markets with attention to grade, purity and timely delivery.",
     itemsLabel: "Commodities",
-    items: ["Gold", "Copper"],
+    items: ["Gold", "Copper", "Diamonds", "Tantalite"],
     itemImages: {
       Gold: "/images/products/gold.jpg",
       Copper: "/images/products/copper.jpg",

@@ -43,7 +43,7 @@ export const productSectors: SectorGroup[] = [
     slug: "metals",
     label: "Precious Metals",
     intro:
-      "Two metals — one precious, one industrial — sourced and supplied to buyers across regional and international markets with attention to grade, purity and timely delivery.",
+      "Gold, copper, diamonds and tantalite — sourced and supplied largely in partnership with trusted companies, with attention to grade, purity and timely delivery.",
     sectionBg: "cream",
     products: [
       {
