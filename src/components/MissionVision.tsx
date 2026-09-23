@@ -14,8 +14,8 @@ export default function MissionVision() {
             </h3>
             <div className="mt-3 h-[2px] w-10 bg-gold" />
             <p className="mt-4 text-[13px] leading-relaxed text-white/70">
-              To ease accessibility and deliver quality commodities — metals,
-              livestock and energy — to our clients, while upholding company
+              To ease accessibility and deliver quality commodities — metals
+              and livestock — to our clients, while upholding company
               integrity and customer satisfaction.
             </p>
           </div>

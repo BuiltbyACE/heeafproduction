@@ -4,14 +4,7 @@ import {
   Gem,
   Zap,
   ShieldCheck,
-  Drumstick,
   Fish,
-  Container,
-  Droplets,
-  Fuel,
-  Plane,
-  Flame,
-  Lamp,
   Globe,
   Package,
   Truck,
@@ -41,47 +34,9 @@ const livestock = [
     text: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling.",
   },
   {
-    icon: Drumstick,
-    title: "Meat",
-    text: "HEEAF works with trusted producers to supply fresh and frozen meat, maintaining hygiene, temperature control and freight speed throughout transit for wholesalers and food processors.",
-  },
-  {
     icon: Fish,
     title: "Fish",
     text: "HEEAF sources and supplies fresh and frozen fish, managing cold-chain handling, packaging and logistics so that product reaches buyers in optimal condition.",
-  },
-];
-
-const energy = [
-  {
-    icon: Container,
-    title: "Crude Oil",
-    text: "HEEAF facilitates sourcing and supply arrangements for crude oil, connecting producers with refiners and industrial buyers through transparent, timely and compliant transactions.",
-  },
-  {
-    icon: Droplets,
-    title: "Premium Motor Spirit (PMS)",
-    text: "HEEAF supplies Premium Motor Spirit that meets strict quality benchmarks, ensuring clean combustion and consistent performance for fuel stations, fleets and bulk distributors.",
-  },
-  {
-    icon: Fuel,
-    title: "Automotive Gas Oil (AGO)",
-    text: "HEEAF supplies diesel to haulage companies, construction firms, agricultural operations and power providers who need dependable fuel and punctual, scheduled deliveries.",
-  },
-  {
-    icon: Plane,
-    title: "Jet Fuel",
-    text: "HEEAF supplies jet fuel that meets international aviation safety and quality standards, working with certified depots and inspection protocols at every stage of handling.",
-  },
-  {
-    icon: Flame,
-    title: "Liquified Petroleum Gas (LPG)",
-    text: "HEEAF supplies LPG in bulk and cylinder form to distributors, households and businesses, with handling protocols that prioritize cylinder integrity, leak-testing and safe storage.",
-  },
-  {
-    icon: Lamp,
-    title: "Kerosene",
-    text: "HEEAF ensures a steady, quality-checked kerosene supply chain reaching both urban distributors and underserved markets where grid power or gas infrastructure is limited.",
   },
 ];
 
@@ -109,12 +64,11 @@ const supplyPillars = [
 ];
 
 /** Large faint Playfair numeral used as an editorial watermark behind sector intro blocks. */
-function SectorNumeral({ n, tone }: { n: string; tone: "gold" | "metal" | "agri" | "energy" }) {
+function SectorNumeral({ n, tone }: { n: string; tone: "gold" | "metal" | "agri" }) {
   const toneClass = {
     gold: "text-gold/10",
     metal: "text-metal/15",
     agri: "text-agri/15",
-    energy: "text-energy/10",
   }[tone];
   return (
     <span
@@ -126,10 +80,9 @@ function SectorNumeral({ n, tone }: { n: string; tone: "gold" | "metal" | "agri"
   );
 }
 
-const cardToneRing: Record<"metal" | "agri" | "energy", string> = {
+const cardToneRing: Record<"metal" | "agri", string> = {
   metal: "hover:border-metal/50 hover:shadow-metal/15",
   agri: "hover:border-agri/50 hover:shadow-agri/15",
-  energy: "hover:border-energy/50 hover:shadow-energy/15",
 };
 
 function MetalsSection() {
@@ -249,7 +202,7 @@ function LivestockSection() {
                 LIVESTOCK
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-text-dark/80">
-                Animal Skins, Hides, Meat &amp; Fish
+                Animal Skins, Hides &amp; Fish
               </p>
               <div className="mt-4 h-[3px] w-16 bg-agri" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
@@ -260,7 +213,7 @@ function LivestockSection() {
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
                 Our livestock portfolio covers animal skins and hides for the
-                leather and textile industries, as well as meat and fish for the
+                leather and textile industries, as well as fish for the
                 food value chain. We emphasize quality handling, cold-chain
                 integrity, sound packaging and efficient delivery.
               </p>
@@ -276,7 +229,7 @@ function LivestockSection() {
           <Reveal delay={120} variant="right">
             <GoldFrame
               src="/images/agriculture-photo.jpg"
-              alt="HEEAF Livestock — animal skins, hides, meat and fish"
+              alt="HEEAF Livestock — animal skins, hides and fish"
               width={880}
               height={620}
               fill={false}
@@ -321,106 +274,6 @@ function LivestockGridSection() {
                     {product.title}
                   </h3>
                   <div className="mt-2 h-[2px] w-8 bg-agri" />
-                  <p className="mt-3 text-[12px] leading-relaxed text-text-dark/65">
-                    {product.text}
-                  </p>
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function EnergySection() {
-  return (
-    <section className="relative overflow-hidden bg-primary-darker bg-grain">
-      <Blob tone="energy" size={520} className="absolute -top-40 -right-40 z-0" opacity={0.28} />
-      <SectorNumeral n="03" tone="energy" />
-      <div className="relative z-10 mx-auto max-w-[1400px] px-6 py-16 md:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <Reveal variant="left">
-            <GoldFrame
-              src="/images/energy-photo.jpg"
-              alt="HEEAF Energy — crude oil and refined petroleum products"
-              width={880}
-              height={620}
-              fill={false}
-            />
-          </Reveal>
-          <Reveal delay={120} variant="right">
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
-                COMMODITY TRADE
-              </span>
-              <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-white leading-snug">
-                ENERGY
-              </h2>
-              <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-white/80">
-                Crude Oil &amp; Petroleum Products
-              </p>
-              <div className="mt-4 h-[3px] w-16 bg-energy" />
-              <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF Investment Limited trades energy commodities through the
-                sourcing and supply of crude oil and refined petroleum products,
-                meeting the needs of industry, transportation and households.
-              </p>
-              <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                Our energy portfolio spans crude oil, PMS, AGO, jet fuel, LPG and
-                kerosene. We coordinate market intelligence, logistics and
-                contract facilitation to ensure transparent, timely and compliant
-                transactions.
-              </p>
-              <Link
-                href="/businesses/energy"
-                className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-energy px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
-              >
-                EXPLORE ENERGY
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function EnergyGridSection() {
-  return (
-    <section className="bg-cream">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
-        <Reveal className="text-center">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-energy">
-            ENERGY PORTFOLIO
-          </span>
-          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            OUR ENERGY COMMODITIES
-          </h2>
-          <div className="mx-auto mt-3 flex items-center gap-2">
-            <div className="h-[2px] w-6 bg-energy/40" />
-            <div className="h-2 w-2 rotate-45 bg-energy" />
-            <div className="h-[2px] w-6 bg-energy/40" />
-          </div>
-        </Reveal>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {energy.map((product, i) => {
-            const Icon = product.icon;
-            return (
-              <Reveal key={product.title} delay={i * 80} variant="scale">
-                <div
-                  className={`group flex flex-col rounded-lg border border-gold/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${cardToneRing.energy}`}
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-energy bg-gradient-to-br from-energy/15 to-transparent transition-transform duration-300 group-hover:scale-110">
-                    <Icon className="h-5 w-5 text-energy" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="mt-4 text-[13px] font-bold uppercase tracking-wider text-text-dark">
-                    {product.title}
-                  </h3>
-                  <div className="mt-2 h-[2px] w-8 bg-energy" />
                   <p className="mt-3 text-[12px] leading-relaxed text-text-dark/65">
                     {product.text}
                   </p>
@@ -490,8 +343,6 @@ export default function BusinessSectorsFull() {
       <MetalsGridSection />
       <LivestockSection />
       <LivestockGridSection />
-      <EnergySection />
-      <EnergyGridSection />
       <SupplyLogisticsSection />
     </>
   );

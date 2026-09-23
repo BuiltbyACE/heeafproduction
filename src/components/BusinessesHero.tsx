@@ -8,7 +8,7 @@ export default function BusinessesHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/businesses-hero.jpg"
-          alt="Metals, livestock and energy — the three commodity sectors of HEEAF Investment Limited"
+          alt="Metals and livestock — the commodity sectors of HEEAF Investment Limited"
           fill
           priority
           sizes="100vw"
@@ -27,13 +27,13 @@ export default function BusinessesHero() {
               OUR BUSINESSES
             </span>
             <h1 className="mt-3 font-[family-name:var(--font-heading)] text-[40px] leading-[1.05] font-bold text-white md:text-[60px]">
-              Three Commodity Sectors.{" "}
+              Two Commodity Sectors.{" "}
               <span className="text-gold">Unlimited Opportunities.</span>
             </h1>
             <div className="mt-4 h-[3px] w-16 bg-gold" />
             <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/80">
-              HEEAF Investment Limited trades commodities across three key
-              sectors — metals, livestock and energy — delivering quality, value
+              HEEAF Investment Limited trades commodities across two key
+              sectors — metals and livestock — delivering quality, value
               and long-term impact.
             </p>
           </div>

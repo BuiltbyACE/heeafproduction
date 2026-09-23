@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "HEEAF Investment Limited",
   description:
-    "Connecting Opportunities. Delivering Value Across Borders. Commodity trading in metals, livestock and energy across Africa and beyond.",
+    "Connecting Opportunities. Delivering Value Across Borders. Commodity trading in metals and livestock across Africa and beyond.",
   icons: {
     icon: "/favicon.png",
   },

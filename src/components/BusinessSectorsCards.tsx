@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Zap, Leaf, Gem, CircleCheck } from "lucide-react";
+import { ArrowRight, Leaf, Gem, CircleCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const sectors = [
@@ -21,21 +21,10 @@ const sectors = [
     image: "/images/agriculture-sector.jpg",
     icon: Leaf,
     description:
-      "We trade livestock and livestock products — animal skins and hides, meat and fish — with quality, care and efficiency.",
-    itemsLeft: ["Animal Skins & Hides", "Meat"],
+      "We trade livestock and livestock products — animal skins, hides and fish — with quality, care and efficiency.",
+    itemsLeft: ["Animal Skins & Hides"],
     itemsRight: ["Fish"],
     buttonLabel: "EXPLORE LIVESTOCK",
-  },
-  {
-    slug: "energy",
-    title: "ENERGY",
-    image: "/images/energy-sector.jpg",
-    icon: Zap,
-    description:
-      "We trade crude oil and refined petroleum products that power transportation, industry and households.",
-    itemsLeft: ["Crude Oil", "Premium Motor Spirit (PMS)", "Automotive Gas Oil (AGO)"],
-    itemsRight: ["Jet Fuel", "Liquified Petroleum Gas (LPG)", "Kerosene"],
-    buttonLabel: "EXPLORE ENERGY",
   },
 ];
 
@@ -57,11 +46,11 @@ export default function BusinessSectorsCards() {
           </div>
           <p className="mx-auto mt-4 max-w-[680px] text-[13px] leading-relaxed text-text-dark/65">
             Driven by integrity and commitment, we trade commodities across
-            Metals, Livestock and Energy for clients and partners worldwide.
+            Metals and Livestock for clients and partners worldwide.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
           {sectors.map((sector, i) => {
             const Icon = sector.icon;
             return (

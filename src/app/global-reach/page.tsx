@@ -69,7 +69,7 @@ const presenceStats = [
   {
     icon: Building2,
     label: "FOCUSED ON",
-    value: "3 COMMODITY SECTORS",
+    value: "2 COMMODITY SECTORS",
   },
 ];
 

@@ -38,14 +38,6 @@ const sectorStyles: Record<string, SectorStyle> = {
     dot: "bg-agri",
     button: "bg-agri hover:brightness-110",
   },
-  energy: {
-    tone: "energy",
-    text: "text-energy",
-    bg: "bg-energy",
-    border: "border-energy/50",
-    dot: "bg-energy",
-    button: "bg-energy hover:brightness-110",
-  },
 };
 
 const defaultStyle: SectorStyle = {

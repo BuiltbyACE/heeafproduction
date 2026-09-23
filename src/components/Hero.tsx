@@ -6,11 +6,7 @@ import {
   Gem,
   Zap,
   ShieldCheck,
-  Drumstick,
   Fish,
-  Droplets,
-  Fuel,
-  Flame,
   Handshake,
   Leaf,
   Users,
@@ -43,29 +39,14 @@ const sectors: Sector[] = [
   {
     slug: "livestock",
     title: "LIVESTOCK",
-    tagline: "Animal Skins, Hides, Meat & Fish",
+    tagline: "Animal Skins, Hides & Fish",
     description:
-      "We trade livestock and livestock products, from animal skins and hides to meat and fish, serving processors and buyers across markets.",
+      "We trade livestock and livestock products, from animal skins and hides to fish, serving processors and buyers across markets.",
     image: "/images/agriculture-photo.jpg",
     icon: ShieldCheck,
     tags: [
       { label: "Animal Skins & Hides", icon: ShieldCheck },
-      { label: "Meat", icon: Drumstick },
       { label: "Fish", icon: Fish },
-    ],
-  },
-  {
-    slug: "energy",
-    title: "ENERGY",
-    tagline: "Crude Oil & Petroleum Products",
-    description:
-      "We trade crude oil and refined petroleum products, keeping transportation, industry and households running across our markets.",
-    image: "/images/energy-photo.jpg",
-    icon: Droplets,
-    tags: [
-      { label: "Crude Oil", icon: Droplets },
-      { label: "PMS", icon: Fuel },
-      { label: "AGO", icon: Flame },
     ],
   },
 ];
@@ -108,7 +89,7 @@ export default function Hero() {
           <div className="mt-5 h-[3px] w-16 bg-gold" />
           <p className="mt-5 max-w-[560px] text-[13px] md:text-[15px] leading-relaxed text-white/80">
             HEEAF Investment Limited is a commodity trading company. We source,
-            trade and supply commodities — metals, livestock and energy —
+            trade and supply commodities — metals and livestock —
             connecting producers with buyers across Africa and beyond.
           </p>
 
@@ -131,7 +112,7 @@ export default function Hero() {
         </div>
 
         {/* Commodity sectors */}
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {sectors.map((sector) => {
             const Icon = sector.icon;
             return (
