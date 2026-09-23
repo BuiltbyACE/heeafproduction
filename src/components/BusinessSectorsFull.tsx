@@ -4,7 +4,6 @@ import {
   Gem,
   Zap,
   ShieldCheck,
-  Fish,
   Globe,
   Package,
   Truck,
@@ -32,11 +31,6 @@ const livestock = [
     icon: ShieldCheck,
     title: "Animal Skins & Hides",
     text: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling.",
-  },
-  {
-    icon: Fish,
-    title: "Fish",
-    text: "HEEAF sources and supplies fresh and frozen fish, managing cold-chain handling, packaging and logistics so that product reaches buyers in optimal condition.",
   },
 ];
 
@@ -202,20 +196,19 @@ function LivestockSection() {
                 LIVESTOCK
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-text-dark/80">
-                Animal Skins, Hides &amp; Fish
+                Animal Skins &amp; Hides
               </p>
               <div className="mt-4 h-[3px] w-16 bg-agri" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
-                HEEAF Investment Limited trades livestock and livestock products
-                within and outside Africa, providing a dependable route to market
-                for producers and a reliable source for processors, wholesalers
-                and international buyers.
+                HEEAF Investment Limited trades animal skins and hides within
+                and outside Africa, providing a dependable route to market for
+                producers and a reliable source for tanneries, wholesalers and
+                international buyers.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
-                Our livestock portfolio covers animal skins and hides for the
-                leather and textile industries, as well as fish for the
-                food value chain. We emphasize quality handling, cold-chain
-                integrity, sound packaging and efficient delivery.
+                Our livestock portfolio focuses on animal skins and hides for the
+                leather and textile industries. We emphasize quality handling,
+                proper curing, sound packaging and efficient delivery.
               </p>
               <Link
                 href="/businesses/livestock"
@@ -229,7 +222,7 @@ function LivestockSection() {
           <Reveal delay={120} variant="right">
             <GoldFrame
               src="/images/agriculture-photo.jpg"
-              alt="HEEAF Livestock — animal skins, hides and fish"
+              alt="HEEAF Livestock — animal skins and hides"
               width={880}
               height={620}
               fill={false}
@@ -259,7 +252,7 @@ function LivestockGridSection() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {livestock.map((product, i) => {
             const Icon = product.icon;
             return (

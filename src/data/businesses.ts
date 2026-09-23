@@ -34,9 +34,9 @@ export const businesses: Business[] = [
     slug: "livestock",
     title: "LIVESTOCK",
     description:
-      "We trade livestock and livestock products — animal skins, hides and fish — sourced across Africa and supplied to tanneries, processors, wholesalers and international buyers with quality and care.",
+      "We trade animal skins and hides — sourced across Africa and supplied to tanneries, processors, wholesalers and international buyers with quality and care.",
     itemsLabel: "Commodities",
-    items: ["Animal Skins & Hides", "Fish"],
+    items: ["Animal Skins & Hides"],
     image: "/images/agriculture-photo.jpg",
     buttonLabel: "EXPLORE LIVESTOCK",
   },

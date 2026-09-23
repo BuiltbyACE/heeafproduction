@@ -6,7 +6,6 @@ import {
   Gem,
   Zap,
   ShieldCheck,
-  Fish,
   Handshake,
   Leaf,
   Users,
@@ -39,14 +38,13 @@ const sectors: Sector[] = [
   {
     slug: "livestock",
     title: "LIVESTOCK",
-    tagline: "Animal Skins, Hides & Fish",
+    tagline: "Animal Skins & Hides",
     description:
-      "We trade livestock and livestock products, from animal skins and hides to fish, serving processors and buyers across markets.",
+      "We trade animal skins and hides, serving tanneries, processors and buyers across markets.",
     image: "/images/agriculture-photo.jpg",
     icon: ShieldCheck,
     tags: [
       { label: "Animal Skins & Hides", icon: ShieldCheck },
-      { label: "Fish", icon: Fish },
     ],
   },
 ];

@@ -21,9 +21,9 @@ const sectors = [
     image: "/images/agriculture-sector.jpg",
     icon: Leaf,
     description:
-      "We trade livestock and livestock products — animal skins, hides and fish — with quality, care and efficiency.",
+      "We trade animal skins and hides — sourced across Africa with quality, care and efficiency.",
     itemsLeft: ["Animal Skins & Hides"],
-    itemsRight: ["Fish"],
+    itemsRight: [],
     buttonLabel: "EXPLORE LIVESTOCK",
   },
 ];

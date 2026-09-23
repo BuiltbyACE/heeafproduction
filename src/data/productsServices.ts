@@ -66,7 +66,7 @@ export const productSectors: SectorGroup[] = [
     slug: "livestock",
     label: "Livestock",
     intro:
-      "Livestock and livestock products — animal skins, hides and fish — connecting Africa's producers to tanneries, processors and markets at home and abroad.",
+      "Animal skins and hides — connecting Africa's producers to tanneries, processors and markets at home and abroad.",
     sectionBg: "white",
     products: [
       {
@@ -75,13 +75,6 @@ export const productSectors: SectorGroup[] = [
         image: "/images/products/hides-skins.jpg",
         alt: "Neatly stacked cured animal hides in a processing warehouse with natural light through a window",
         copy: "Animal skins and hides are a foundational raw material for the leather and textile industries. HEEAF sources, grades and supplies quality-checked skins and hides from within Africa to tanneries and manufacturers both regionally and internationally. Our sourcing network emphasizes proper curing, correct grading and timely export handling — critical factors that determine value in this trade.",
-      },
-      {
-        slug: "fish",
-        title: "Fish",
-        image: "/images/products/meat-fish.jpg",
-        alt: "Fresh fish displayed on ice in a clean cold-storage facility",
-        copy: "Fish is a vital protein commodity across African and international markets. HEEAF sources and supplies fresh and frozen fish, managing cold-chain handling, packaging and logistics so that product reaches buyers in optimal condition. We serve wholesalers, processors and distributors who value dependable supply and consistent grading.",
       },
     ],
   },
