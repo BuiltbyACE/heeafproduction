@@ -73,8 +73,8 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#080a0e]/85" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#080a0e] via-[#080a0e]/85 to-[#080a0e]/40" />
+        <div className="absolute inset-0 bg-[#080a0e]/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#080a0e]/85 via-[#080a0e]/40 to-transparent" />
       </div>
       <div className="pointer-events-none absolute -top-40 -right-32 h-[520px] w-[520px] rounded-full bg-[#d4941c]/20 blur-3xl" />
 
