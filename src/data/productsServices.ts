@@ -41,7 +41,7 @@ export type SectorGroup = {
 export const productSectors: SectorGroup[] = [
   {
     slug: "metals",
-    label: "Metals",
+    label: "Precious Metals",
     intro:
       "Two metals — one precious, one industrial — sourced and supplied to buyers across regional and international markets with attention to grade, purity and timely delivery.",
     sectionBg: "cream",

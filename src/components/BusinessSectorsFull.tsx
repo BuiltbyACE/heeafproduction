@@ -92,29 +92,29 @@ function MetalsSection() {
                 COMMODITY TRADE
               </span>
               <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-white leading-snug">
-                METALS
+                PRECIOUS METALS
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-white/80">
-                Precious and Base Metals
+                Gold &amp; Copper
               </p>
               <div className="mt-4 h-[3px] w-16 bg-metal" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF Investment Limited trades metals as part of its commodity
-                business, sourcing and supplying precious and base metals to
+                HEEAF Investment Limited trades precious metals as part of its
+                commodity business, sourcing and supplying precious metals to
                 buyers across regional and international markets.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
                 From gold, a store of value and industrial input, to copper, the
-                backbone of modern infrastructure, our metals portfolio connects
-                mining producers with refiners, manufacturers and traders. We
-                manage grading, assaying, documentation and cross-border
-                logistics with the compliance this trade demands.
+                backbone of modern infrastructure, our precious metals portfolio
+                connects mining producers with refiners, manufacturers and
+                traders. We manage grading, assaying, documentation and
+                cross-border logistics with the compliance this trade demands.
               </p>
               <Link
                 href="/businesses/metals"
                 className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-metal px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
               >
-                EXPLORE METALS
+                EXPLORE PRECIOUS METALS
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
@@ -122,7 +122,7 @@ function MetalsSection() {
           <Reveal delay={120} variant="right">
             <GoldFrame
               src="/images/gold.jpeg"
-              alt="HEEAF Metals — gold and copper commodity trading"
+              alt="HEEAF Precious Metals — gold and copper commodity trading"
               width={880}
               height={620}
               fill={false}
@@ -140,10 +140,10 @@ function MetalsGridSection() {
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <Reveal className="text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-metal">
-            METALS PORTFOLIO
+            PRECIOUS METALS PORTFOLIO
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            OUR METALS
+            OUR PRECIOUS METALS
           </h2>
           <div className="mx-auto mt-3 flex items-center gap-2">
             <div className="h-[2px] w-6 bg-metal/40" />

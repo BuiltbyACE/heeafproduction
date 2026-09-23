@@ -15,7 +15,7 @@ const quickLinks = [
 ];
 
 const businesses = [
-  { label: "Metals", href: "/businesses/metals" },
+  { label: "Precious Metals", href: "/businesses/metals" },
   { label: "Livestock", href: "/businesses/livestock" },
 ];
 

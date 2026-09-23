@@ -14,7 +14,7 @@ export default function BusinessSectors() {
           <div className="mx-auto mt-3 h-[3px] w-16 bg-gold" />
           <p className="mt-4 text-[13px] leading-relaxed text-text-dark/70">
             Driven by integrity and commitment, we trade commodities across
-            Metals and Livestock for clients and partners worldwide.
+            Precious Metals and Livestock for clients and partners worldwide.
           </p>
         </div>
 

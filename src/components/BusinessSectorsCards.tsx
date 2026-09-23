@@ -6,14 +6,14 @@ import Reveal from "@/components/Reveal";
 const sectors = [
   {
     slug: "metals",
-    title: "METALS",
+    title: "PRECIOUS METALS",
     image: "/images/gold.jpeg",
     icon: Gem,
     description:
-      "We source and trade precious and base metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets.",
+      "We source and trade precious metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets.",
     itemsLeft: ["Gold (Precious Metal)"],
     itemsRight: ["Copper (Base Metal)"],
-    buttonLabel: "EXPLORE METALS",
+    buttonLabel: "EXPLORE PRECIOUS METALS",
   },
   {
     slug: "livestock",
@@ -46,7 +46,7 @@ export default function BusinessSectorsCards() {
           </div>
           <p className="mx-auto mt-4 max-w-[680px] text-[13px] leading-relaxed text-text-dark/65">
             Driven by integrity and commitment, we trade commodities across
-            Metals and Livestock for clients and partners worldwide.
+            Precious Metals and Livestock for clients and partners worldwide.
           </p>
         </Reveal>
 

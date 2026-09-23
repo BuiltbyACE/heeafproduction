@@ -18,9 +18,9 @@ export type Business = {
 export const businesses: Business[] = [
   {
     slug: "metals",
-    title: "METALS",
+    title: "PRECIOUS METALS",
     description:
-      "We source and trade precious and base metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets with attention to grade, purity and timely delivery.",
+      "We source and trade precious metals, connecting mining producers with refiners, manufacturers and buyers across regional and international markets with attention to grade, purity and timely delivery.",
     itemsLabel: "Commodities",
     items: ["Gold", "Copper"],
     itemImages: {
@@ -28,7 +28,7 @@ export const businesses: Business[] = [
       Copper: "/images/products/copper.jpg",
     },
     image: "/images/gold.jpeg",
-    buttonLabel: "EXPLORE METALS",
+    buttonLabel: "EXPLORE PRECIOUS METALS",
   },
   {
     slug: "livestock",

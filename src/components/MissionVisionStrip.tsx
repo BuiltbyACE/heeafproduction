@@ -6,7 +6,7 @@ const items = [
   {
     icon: Target,
     title: "MISSION",
-    text: "To ease accessibility and deliver quality commodities — metals and livestock — to our clients, while upholding integrity.",
+    text: "To ease accessibility and deliver quality commodities — precious metals and livestock — to our clients, while upholding integrity.",
   },
   {
     icon: Eye,

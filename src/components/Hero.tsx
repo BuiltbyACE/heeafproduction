@@ -24,10 +24,10 @@ type Sector = {
 const sectors: Sector[] = [
   {
     slug: "metals",
-    title: "METALS",
-    tagline: "Precious & Base Metals",
+    title: "PRECIOUS METALS",
+    tagline: "Precious Metals",
     description:
-      "We source and trade precious and base metals, connecting mining producers with refiners, manufacturers and buyers worldwide.",
+      "We source and trade precious metals, connecting mining producers with refiners, manufacturers and buyers worldwide.",
     image: "/images/gold.jpeg",
     icon: Gem,
     tags: [
@@ -87,7 +87,7 @@ export default function Hero() {
           <div className="mt-5 h-[3px] w-16 bg-gold" />
           <p className="mt-5 max-w-[560px] text-[13px] md:text-[15px] leading-relaxed text-white/80">
             HEEAF Investment Limited is a commodity trading company. We source,
-            trade and supply commodities — metals and livestock —
+            trade and supply commodities — precious metals and livestock —
             connecting producers with buyers across Africa and beyond.
           </p>
 
