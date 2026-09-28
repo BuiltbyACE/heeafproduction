@@ -49,9 +49,9 @@ export const productSectors: SectorGroup[] = [
       {
         slug: "gold",
         title: "Gold",
-        image: "/images/products/gold.jpg",
-        alt: "Raw gold nuggets and refined bars displayed on a dark surface under warm lighting",
-        copy: "Gold remains one of the most sought-after precious metals globally, serving as both a store of value and a critical input in electronics, jewelry and financial markets. HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance this trade demands. Our network connects African mining operations with international buyers seeking conflict-free, properly certified gold supplies.",
+        image: "/images/gold-bars-nuggets.jpg",
+        alt: "A few gold bars beside a professional safety box filled with gold nuggets, displayed on a dark surface under warm lighting",
+        copy: "Gold remains one of the most sought-after precious metals globally, serving as both a store of value and a critical input in electronics, jewelry and financial markets. HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance that this trade demands. Our supply network is global, enabling us to serve clients across international markets.",
       },
       {
         slug: "copper",
@@ -74,7 +74,7 @@ export const productSectors: SectorGroup[] = [
         title: "Animal Skins & Hides",
         image: "/images/products/hides-skins.jpg",
         alt: "Neatly stacked cured animal hides in a processing warehouse with natural light through a window",
-        copy: "Animal skins and hides are a foundational raw material for the leather and textile industries. HEEAF sources, grades and supplies quality-checked skins and hides from within Africa to tanneries and manufacturers both regionally and internationally. Our sourcing network emphasizes proper curing, correct grading and timely export handling — critical factors that determine value in this trade.",
+        copy: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling. We specialize in the supply of high-quality bovine and other animal hides and skins, available in both salted and air-dried forms, to buyers across domestic and international markets.",
       },
     ],
   },

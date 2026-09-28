@@ -6,17 +6,17 @@ const items = [
   {
     icon: Target,
     title: "MISSION",
-    text: "To ease accessibility and deliver quality commodities — precious metals and livestock — to our clients, while upholding integrity.",
+    text: "To connect clients with quality precious metals and bovine hides and skins through reliable sourcing, efficient trade, timeliness and uncompromising integrity.",
   },
   {
     icon: Eye,
     title: "VISION",
-    text: "To be a global beacon of trust in commodity trade, where our customers and partners smile as they interact with us.",
+    text: "To be a global beacon of trust in commodity trade, where every customer and partner experiences confidence, value, and a reason to smile.",
   },
   {
     icon: UserRound,
     title: "PHILOSOPHY",
-    text: "Our decision-making is customer and partner centered, focused on delivering unparalleled products and services.",
+    text: "We are rooted in customer and partner centered decision-making, delivering quality commodities through excellence and lasting partnerships.",
   },
 ];
 

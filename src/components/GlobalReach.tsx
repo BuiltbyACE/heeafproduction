@@ -46,13 +46,13 @@ export default function GlobalReach() {
         </Reveal>
 
         {/* CENTER — dotted map */}
-        <Reveal delay={100} variant="scale" className="w-full max-w-[440px] flex-1">
+        <Reveal delay={100} variant="scale" className="w-full max-w-[560px] flex-[1.5]">
           <div className="relative mx-auto w-full">
             <Image
-              src="/images/world-map.svg"
+              src="/images/global-reach-map.png"
               alt="HEEAF global reach — decorative world map"
-              width={440}
-              height={220}
+              width={560}
+              height={315}
               className="mx-auto h-auto w-full opacity-80"
             />
             {mapDots.map((dot, i) => (
@@ -68,7 +68,7 @@ export default function GlobalReach() {
         </Reveal>
 
         {/* RIGHT — region badges */}
-        <div className="grid w-full flex-[1.2] grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2">
+        <div className="grid w-full max-w-[360px] flex-1 grid-cols-1 gap-x-6 gap-y-8">
           {regions.map((region, i) => (
             <Reveal key={region.name} delay={i * 80} variant="right">
               <div className="flex items-start gap-4">

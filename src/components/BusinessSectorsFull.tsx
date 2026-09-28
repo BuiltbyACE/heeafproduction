@@ -19,7 +19,7 @@ const metals = [
   {
     icon: Gem,
     title: "Gold",
-    text: "HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance this precious metal trade demands.",
+    text: "HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance that this trade demands. Our supply network is global, enabling us to serve clients across international markets.",
   },
   {
     icon: Zap,
@@ -42,7 +42,7 @@ const livestock = [
   {
     icon: ShieldCheck,
     title: "Animal Skins & Hides",
-    text: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling.",
+    text: "We specialize in the supply of high-quality bovine and other animal hides and skins, available in both salted and air-dried forms, to buyers across domestic and international markets.",
   },
 ];
 
@@ -65,7 +65,7 @@ const supplyPillars = [
   {
     icon: ThumbsUp,
     title: "Customer Satisfaction",
-    text: "Customer satisfaction and business fidelity are central to HEEAF's commodity operations. We are committed to meeting the expectations of our clients and partners.",
+    text: "Customer satisfaction and business fidelity are central to HEEAF's commodity operations. We are committed to meeting the expectations of our clients and partners. Trusted Trade. Global Reach.",
   },
 ];
 
@@ -111,18 +111,22 @@ function MetalsSection() {
               </p>
               <div className="mt-4 h-[3px] w-16 bg-metal" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-white/75">
-                HEEAF Investment Limited trades precious metals — gold, copper,
-                diamonds and tantalite — largely in partnership with specialised
-                companies, sourcing and supplying to buyers across regional and
-                international markets.
+                Gold remains one of the most sought-after precious metals
+                globally, serving both as a store of value and as a critical
+                input in electronics, jewelry, and financial markets. HEEAF
+                sources and supplies gold to refineries, bullion dealers, and
+                industrial buyers, managing assaying, documentation, and
+                cross-border logistics with the discretion and compliance that
+                this trade demands. Our supply network is global, enabling us to
+                serve clients across international markets.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-white/75">
                 From gold and diamonds, coveted stores of value, to copper and
                 tantalite, the materials powering modern industry and
-                electronics, our precious metals portfolio connects producers
-                with refiners, manufacturers and traders. Grading, documentation
-                and cross-border logistics are managed with the compliance this
-                trade demands.
+                electronics, our precious metals portfolio supplies quality
+                products to end buyers. Grading, documentation and cross-border
+                logistics are managed with the compliance that this trade
+                demands.
               </p>
               <Link
                 href="/businesses/metals"
@@ -135,10 +139,10 @@ function MetalsSection() {
           </Reveal>
           <Reveal delay={120} variant="right">
             <GoldFrame
-              src="/images/gold.jpeg"
-              alt="HEEAF Precious Metals — gold, copper, diamonds and tantalite commodity trading"
+              src="/images/gold-bars-nuggets.jpg"
+              alt="HEEAF Precious Metals — a few gold bars beside a professional safety box filled with gold nuggets"
               width={880}
-              height={620}
+              height={605}
               fill={false}
             />
           </Reveal>
@@ -214,15 +218,14 @@ function LivestockSection() {
               </p>
               <div className="mt-4 h-[3px] w-16 bg-agri" />
               <p className="mt-6 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
-                HEEAF Investment Limited trades animal skins and hides within
-                and outside Africa, providing a dependable route to market for
-                producers and a reliable source for tanneries, wholesalers and
-                international buyers.
+                HEEAF sources, grades and supplies quality-checked animal skins
+                and hides to tanneries and manufacturers, with emphasis on
+                proper curing, correct grading and timely export handling.
               </p>
               <p className="mt-4 max-w-[520px] text-[14px] leading-relaxed text-text-dark/75">
-                Our livestock portfolio focuses on animal skins and hides for the
-                leather and textile industries. We emphasize quality handling,
-                proper curing, sound packaging and efficient delivery.
+                We specialize in the supply of high-quality bovine and other
+                animal hides and skins, available in both salted and air-dried
+                forms, to buyers across domestic and international markets.
               </p>
               <Link
                 href="/businesses/livestock"

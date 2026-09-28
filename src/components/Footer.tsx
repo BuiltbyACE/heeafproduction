@@ -94,28 +94,26 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
                 <span className="text-[12px] text-white/60 leading-relaxed">
-                  P.O Box 73447 - 00200 Nairobi, Kenya
+                  P.O. Box 638-01000 Nairobi, Kenya
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
                 <a
-                  href="mailto:heeafinvestmentltdk@gmail.com"
+                  href="mailto:info@heeafltd.com"
                   className="text-[12px] text-white/60 transition-colors hover:text-gold"
                 >
-                  heeafinvestmentltdk@gmail.com
+                  info@heeafltd.com
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
-                <div className="flex flex-col gap-1">
-                  <span className="text-[12px] text-white/60">
-                    +254 726 653 542 (Kenya)
-                  </span>
-                  <span className="text-[12px] text-white/60">
-                    +234 7030157949 (Nigeria)
-                  </span>
-                </div>
+                <a
+                  href="tel:+254726653542"
+                  className="text-[12px] text-white/60 transition-colors hover:text-gold"
+                >
+                  +254 726 653 542 (Kenya)
+                </a>
               </li>
             </ul>
           </div>

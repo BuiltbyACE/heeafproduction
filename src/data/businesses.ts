@@ -24,10 +24,10 @@ export const businesses: Business[] = [
     itemsLabel: "Commodities",
     items: ["Gold", "Copper", "Diamonds", "Tantalite"],
     itemImages: {
-      Gold: "/images/products/gold.jpg",
+      Gold: "/images/gold-bars-nuggets.jpg",
       Copper: "/images/products/copper.jpg",
     },
-    image: "/images/gold.jpeg",
+    image: "/images/gold-bars-nuggets.jpg",
     buttonLabel: "EXPLORE PRECIOUS METALS",
   },
   {

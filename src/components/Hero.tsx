@@ -30,7 +30,7 @@ const sectors: Sector[] = [
     tagline: "Precious Metals",
     description:
       "We source and trade gold, copper, diamonds and tantalite — largely in partnership with specialised companies — connecting producers with buyers worldwide.",
-    image: "/images/gold.jpeg",
+    image: "/images/gold-bars-nuggets.jpg",
     icon: Gem,
     tags: [
       { label: "Gold", icon: Gem },
@@ -85,15 +85,12 @@ export default function Hero() {
             WELCOME TO HEEAF INVESTMENT LIMITED
           </p>
           <h1 className="mt-3 font-[family-name:var(--font-heading)] text-[34px] md:text-[52px] lg:text-[58px] font-black leading-[1.06] text-white tracking-tight">
-            Connecting Opportunities.
             <span className="block text-gold">Delivering Value Across Borders.</span>
           </h1>
           <div className="mt-5 h-[3px] w-16 bg-gold" />
           <p className="mt-5 max-w-[560px] text-[13px] md:text-[15px] leading-relaxed text-white/80">
-            HEEAF Investment Limited is a commodity trading company. We source,
-            trade and supply commodities, precious metals and livestock hides
-            and skins, connecting producers with buyers across Africa and
-            beyond.
+            We specialize in trading hides and skins, as well as precious
+            metals.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

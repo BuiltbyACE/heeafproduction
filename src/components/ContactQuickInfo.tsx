@@ -5,17 +5,17 @@ const infoItems = [
   {
     icon: MapPin,
     label: "OUR OFFICE",
-    detail: "P.O Box 73447 - 00200 / Nairobi, Kenya",
+    detail: "P.O. Box 638-01000 / Nairobi, Kenya",
   },
   {
     icon: Mail,
     label: "EMAIL US",
-    detail: "heeafinvestmentltdk@gmail.com",
+    detail: "info@heeafltd.com",
   },
   {
     icon: Phone,
     label: "CALL US",
-    detail: "+254 726 653 542 (Kenya) / +234 7030157949 (Nigeria)",
+    detail: "+254 726 653 542 (Kenya)",
   },
   {
     icon: Clock,
