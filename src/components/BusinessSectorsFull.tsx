@@ -38,7 +38,7 @@ const metals = [
   },
 ];
 
-const livestock = [
+const agricultural = [
   {
     icon: ShieldCheck,
     title: "Animal Skins & Hides",
@@ -139,10 +139,10 @@ function MetalsSection() {
           </Reveal>
           <Reveal delay={120} variant="right">
             <GoldFrame
-              src="/images/gold-bars-nuggets.jpg"
-              alt="HEEAF Precious Metals — a few gold bars beside a professional safety box filled with gold nuggets"
+              src="/images/gold-image.jpeg"
+              alt="HEEAF Precious Metals — gold bars and nuggets from the HEEAF precious metals portfolio"
               width={880}
-              height={605}
+              height={663}
               fill={false}
             />
           </Reveal>
@@ -198,7 +198,7 @@ function MetalsGridSection() {
   );
 }
 
-function LivestockSection() {
+function AgriculturalSection() {
   return (
     <section className="relative overflow-hidden bg-white">
       <Blob tone="agri" size={520} className="absolute -top-40 -left-40 z-0" opacity={0.22} />
@@ -211,7 +211,7 @@ function LivestockSection() {
                 COMMODITY TRADE
               </span>
               <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[28px] md:text-[36px] font-bold text-text-dark leading-snug">
-                LIVESTOCK
+                AGRICULTURAL PRODUCTS
               </h2>
               <p className="mt-2 font-[family-name:var(--font-heading)] text-[16px] md:text-[20px] font-semibold text-text-dark/80">
                 Animal Skins &amp; Hides
@@ -228,18 +228,18 @@ function LivestockSection() {
                 forms, to buyers across domestic and international markets.
               </p>
               <Link
-                href="/businesses/livestock"
+                href="/businesses/agricultural-products"
                 className="btn-shine mt-8 inline-flex h-[44px] items-center gap-2 rounded bg-agri px-6 text-[11px] font-bold text-white uppercase tracking-wider transition-all hover:brightness-110 hover:scale-[1.03]"
               >
-                EXPLORE LIVESTOCK
+                EXPLORE AGRICULTURAL PRODUCTS
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </Reveal>
           <Reveal delay={120} variant="right">
             <GoldFrame
-              src="/images/agriculture-photo.jpg"
-              alt="HEEAF Livestock — animal skins and hides"
+              src="/images/hides2.jpeg"
+              alt="HEEAF Agricultural Products — animal skins and hides"
               width={880}
               height={620}
               fill={false}
@@ -251,16 +251,16 @@ function LivestockSection() {
   );
 }
 
-function LivestockGridSection() {
+function AgriculturalGridSection() {
   return (
     <section className="bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
         <Reveal className="text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-agri">
-            LIVESTOCK PORTFOLIO
+            AGRICULTURAL PRODUCTS PORTFOLIO
           </span>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-[24px] md:text-[30px] font-bold text-text-dark">
-            OUR LIVESTOCK PRODUCTS
+            OUR AGRICULTURAL PRODUCTS
           </h2>
           <div className="mx-auto mt-3 flex items-center gap-2">
             <div className="h-[2px] w-6 bg-agri/40" />
@@ -270,7 +270,7 @@ function LivestockGridSection() {
         </Reveal>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {livestock.map((product, i) => {
+          {agricultural.map((product, i) => {
             const Icon = product.icon;
             return (
               <Reveal key={product.title} delay={i * 80} variant="scale">
@@ -297,7 +297,7 @@ function LivestockGridSection() {
   );
 }
 
-function SupplyLogisticsSection() {
+export function SupplyLogisticsSection() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:py-20">
@@ -351,9 +351,8 @@ export default function BusinessSectorsFull() {
     <>
       <MetalsSection />
       <MetalsGridSection />
-      <LivestockSection />
-      <LivestockGridSection />
-      <SupplyLogisticsSection />
+      <AgriculturalSection />
+      <AgriculturalGridSection />
     </>
   );
 }

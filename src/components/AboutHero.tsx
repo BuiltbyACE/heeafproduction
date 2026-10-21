@@ -18,8 +18,9 @@ export default function AboutHero() {
           <div className="mt-4 h-[3px] w-16 bg-gold" />
           <p className="mt-5 max-w-[520px] text-[13px] leading-relaxed text-white/80">
             HEEAF Investment Limited is a commodity trading company. We trade
-            precious metals and livestock, connecting producers with buyers across
-            Africa and beyond, with the ambition of expanding further.
+            precious metals and agricultural products, connecting producers with
+            buyers across Africa and beyond, with the ambition of expanding
+            further.
           </p>
         </Reveal>
 

@@ -7,7 +7,7 @@ const sectors = [
   {
     slug: "metals",
     title: "PRECIOUS METALS",
-    image: "/images/gold.jpeg",
+    image: "/images/gold-image.jpeg",
     icon: Gem,
     description:
       "We source and trade gold, copper, diamonds and tantalite — largely in partnership with specialised companies.",
@@ -16,15 +16,15 @@ const sectors = [
     buttonLabel: "EXPLORE PRECIOUS METALS",
   },
   {
-    slug: "livestock",
-    title: "LIVESTOCK",
-    image: "/images/agriculture-sector.jpg",
+    slug: "agricultural-products",
+    title: "AGRICULTURAL PRODUCTS",
+    image: "/images/hides2.jpeg",
     icon: Leaf,
     description:
       "We trade animal skins and hides — sourced across Africa with quality, care and efficiency.",
     itemsLeft: ["Animal Skins & Hides"],
     itemsRight: [],
-    buttonLabel: "EXPLORE LIVESTOCK",
+    buttonLabel: "EXPLORE AGRICULTURAL PRODUCTS",
   },
 ];
 
@@ -46,7 +46,8 @@ export default function BusinessSectorsCards() {
           </div>
           <p className="mx-auto mt-4 max-w-[680px] text-[13px] leading-relaxed text-text-dark/65">
             Driven by integrity and commitment, we trade commodities across
-            Precious Metals and Livestock for clients and partners worldwide.
+            Precious Metals and Agricultural Products for clients and partners
+            worldwide.
           </p>
         </Reveal>
 

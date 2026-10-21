@@ -24,21 +24,11 @@ export default function GlobalReach() {
       <Blob tone="gold" size={500} className="absolute top-0 right-0 z-0" opacity={0.16} />
 
       <div className="relative z-10 mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-12 px-6 py-16 md:py-20 md:flex-row md:items-center">
-        {/* LEFT — intro text */}
+        {/* LEFT — call to action */}
         <Reveal variant="left" className="w-full flex-1 md:max-w-[400px] text-center md:text-left">
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-gold">
-            GLOBAL REACH
-          </span>
-          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold leading-snug text-white md:text-4xl">
-            Connecting Continents.{" "}
-            <span className="text-gold">Delivering Excellence.</span>
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-white/60">
-            Our clients and partners span across Africa and the world.
-          </p>
           <Link
             href="/global-reach"
-            className="btn-shine mt-6 inline-flex h-11 items-center gap-2 rounded border border-gold px-7 text-xs font-bold uppercase tracking-wider text-gold transition-colors hover:bg-gold hover:text-white"
+            className="btn-shine inline-flex h-11 items-center gap-2 rounded border border-gold px-7 text-xs font-bold uppercase tracking-wider text-gold transition-colors hover:bg-gold hover:text-white"
           >
             VIEW OUR GLOBAL REACH
             <ArrowRight className="h-4 w-4" />

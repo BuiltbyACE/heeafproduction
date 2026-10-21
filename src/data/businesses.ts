@@ -11,6 +11,9 @@ export type Business = {
   items: string[];
   itemImages?: Record<string, string>;
   image: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageWrapper?: string;
   buttonLabel: string;
   subItems?: BusinessSubItem[];
 };
@@ -24,25 +27,34 @@ export const businesses: Business[] = [
     itemsLabel: "Commodities",
     items: ["Gold", "Copper", "Diamonds", "Tantalite"],
     itemImages: {
-      Gold: "/images/gold-bars-nuggets.jpg",
+      Gold: "/images/gold-image.jpeg",
       Copper: "/images/products/copper.jpg",
     },
-    image: "/images/gold-bars-nuggets.jpg",
+    image: "/images/gold-image.jpeg",
+    imageWidth: 880,
+    imageHeight: 620,
+    imageWrapper: "h-[340px] md:h-[420px]",
     buttonLabel: "EXPLORE PRECIOUS METALS",
   },
   {
-    slug: "livestock",
-    title: "LIVESTOCK",
+    slug: "agricultural-products",
+    title: "AGRICULTURAL PRODUCTS",
     description:
-      "We trade animal skins and hides — sourced across Africa and supplied to tanneries, processors, wholesalers and international buyers with quality and care.",
+      "We trade agricultural products — animal skins and hides sourced across Africa and supplied to tanneries, processors, wholesalers and international buyers with quality and care.",
     itemsLabel: "Commodities",
     items: ["Animal Skins & Hides"],
-    image: "/images/agriculture-photo.jpg",
-    buttonLabel: "EXPLORE LIVESTOCK",
+    itemImages: {
+      "Animal Skins & Hides": "/images/hides2.jpeg",
+    },
+    image: "/images/hides2.jpeg",
+    imageWidth: 880,
+    imageHeight: 620,
+    imageWrapper: "h-[340px] md:h-[420px]",
+    buttonLabel: "EXPLORE AGRICULTURAL PRODUCTS",
   },
 ];
 
 export const businessPaths: Record<string, string> = {
   metals: "/businesses/metals",
-  livestock: "/businesses/livestock",
+  "agricultural-products": "/businesses/agricultural-products",
 };

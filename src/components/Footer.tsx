@@ -16,7 +16,7 @@ const quickLinks = [
 
 const businesses = [
   { label: "Precious Metals", href: "/businesses/metals" },
-  { label: "Livestock", href: "/businesses/livestock" },
+  { label: "Agricultural Products", href: "/businesses/agricultural-products" },
 ];
 
 export default function Footer() {

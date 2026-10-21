@@ -27,8 +27,9 @@ export default function AboutSection() {
             <div className="mt-3 h-[3px] w-14 bg-gold" />
             <p className="mt-5 text-[13px] leading-relaxed text-text-dark/75 max-w-[560px]">
               HEEAF Investment Limited is a commodity trading company dealing in
-              precious metals and livestock. We are physically located in Nigeria
-              and Kenya with the ambition of expanding to other countries.
+              precious metals and agricultural products. We are physically
+              located in Nigeria and Kenya with the ambition of expanding to
+              other countries.
             </p>
             <Link
               href="/about"

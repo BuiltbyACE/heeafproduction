@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   Handshake,
   Leaf,
-  Users,
   Diamond,
   Cpu,
 } from "lucide-react";
@@ -21,6 +20,10 @@ type Sector = {
   image: string;
   icon: LucideIcon;
   tags: { label: string; icon: LucideIcon }[];
+  /** Height of the card image frame. */
+  cardHeight?: string;
+  /** Show the whole photo (letterboxed) instead of cropping it to the frame. */
+  cardContain?: boolean;
 };
 
 const sectors: Sector[] = [
@@ -30,7 +33,7 @@ const sectors: Sector[] = [
     tagline: "Precious Metals",
     description:
       "We source and trade gold, copper, diamonds and tantalite — largely in partnership with specialised companies — connecting producers with buyers worldwide.",
-    image: "/images/gold-bars-nuggets.jpg",
+    image: "/images/gold-image.jpeg",
     icon: Gem,
     tags: [
       { label: "Gold", icon: Gem },
@@ -40,13 +43,15 @@ const sectors: Sector[] = [
     ],
   },
   {
-    slug: "livestock",
-    title: "LIVESTOCK",
+    slug: "agricultural-products",
+    title: "AGRICULTURAL PRODUCTS",
     tagline: "Animal Skins & Hides",
     description:
       "We trade animal skins and hides, serving tanneries, processors and buyers across markets.",
-    image: "/images/agriculture-photo.jpg",
+    image: "/images/hides2.jpeg",
     icon: ShieldCheck,
+    cardHeight: "h-[250px]",
+    cardContain: true,
     tags: [
       { label: "Animal Skins & Hides", icon: ShieldCheck },
     ],
@@ -56,7 +61,6 @@ const sectors: Sector[] = [
 const values = [
   { icon: Handshake, title: "Integrity", text: "We do what is right" },
   { icon: Leaf, title: "Sustainability", text: "For future generations" },
-  { icon: Users, title: "Community", text: "Stronger together" },
   { icon: ShieldCheck, title: "Excellence", text: "In everything we do" },
 ];
 
@@ -121,13 +125,15 @@ export default function Hero() {
                 href={`/businesses/${sector.slug}`}
                 className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-white/[0.07]"
               >
-                <div className="relative h-[180px]">
+                <div className={`relative ${sector.cardHeight ?? "h-[180px]"}`}>
                   <Image
                     src={sector.image}
                     alt={sector.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`transition-transform duration-500 group-hover:scale-105 ${
+                      sector.cardContain ? "object-contain" : "object-cover"
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080a0e] via-[#080a0e]/45 to-transparent" />
                   <div className="absolute bottom-4 left-5 flex items-center gap-3">
@@ -176,7 +182,7 @@ export default function Hero() {
 
       {/* Core values bar */}
       <div className="relative z-10 border-t border-white/10 bg-[#07090c]">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-y-6 px-6 py-8 md:grid-cols-4">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-y-6 px-6 py-8 md:grid-cols-3">
           {values.map((value) => {
             const Icon = value.icon;
             return (

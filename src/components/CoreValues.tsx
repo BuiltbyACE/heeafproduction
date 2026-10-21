@@ -1,11 +1,10 @@
-import { ShieldCheck, Leaf, Users, Award } from "lucide-react";
+import { ShieldCheck, Leaf, Award } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Blob from "@/components/Blob";
 
 const values = [
   { icon: ShieldCheck, title: "INTEGRITY", text: "We do what is right" },
   { icon: Leaf, title: "SUSTAINABILITY", text: "For future generations" },
-  { icon: Users, title: "COMMUNITY", text: "Stronger together" },
   { icon: Award, title: "EXCELLENCE", text: "In everything we do" },
 ];
 
@@ -29,7 +28,7 @@ export default function CoreValues() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3">
           {values.map((v, idx) => {
             const Icon = v.icon;
             return (

@@ -30,7 +30,7 @@ const sectorStyles: Record<string, SectorStyle> = {
     dot: "bg-metal",
     button: "bg-metal hover:brightness-110",
   },
-  livestock: {
+  "agricultural-products": {
     tone: "agri",
     text: "text-agri",
     bg: "bg-agri",
@@ -90,10 +90,10 @@ export default async function BusinessPage({ params }: Props) {
                 <GoldFrame
                   src={biz.image}
                   alt={biz.title}
-                  width={880}
-                  height={620}
+                  width={biz.imageWidth ?? 880}
+                  height={biz.imageHeight ?? 620}
                   fill={false}
-                  wrapperClassName="h-[340px] md:h-[420px]"
+                  wrapperClassName={biz.imageWrapper ?? "h-[340px] md:h-[420px]"}
                 />
               </Reveal>
               <Reveal delay={120} variant="right">

@@ -1,5 +1,4 @@
 import Reveal from "@/components/Reveal";
-import GoldFrame from "@/components/GoldFrame";
 import type { Product, SectorAccent } from "@/data/productsServices";
 
 export default function ProductBlock({

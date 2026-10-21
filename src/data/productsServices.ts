@@ -14,7 +14,7 @@ export const sectorAccents: Record<string, SectorAccent> = {
     bg: "bg-metal",
     border: "border-metal/50",
   },
-  livestock: {
+  "agricultural-products": {
     tone: "agri",
     text: "text-agri",
     bg: "bg-agri",
@@ -49,7 +49,7 @@ export const productSectors: SectorGroup[] = [
       {
         slug: "gold",
         title: "Gold",
-        image: "/images/gold-bars-nuggets.jpg",
+        image: "/images/gold-image.jpeg",
         alt: "A few gold bars beside a professional safety box filled with gold nuggets, displayed on a dark surface under warm lighting",
         copy: "Gold remains one of the most sought-after precious metals globally, serving as both a store of value and a critical input in electronics, jewelry and financial markets. HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance that this trade demands. Our supply network is global, enabling us to serve clients across international markets.",
       },
@@ -63,8 +63,8 @@ export const productSectors: SectorGroup[] = [
     ],
   },
   {
-    slug: "livestock",
-    label: "Livestock",
+    slug: "agricultural-products",
+    label: "Agricultural Products",
     intro:
       "Animal skins and hides — connecting Africa's producers to tanneries, processors and markets at home and abroad.",
     sectionBg: "white",
@@ -72,7 +72,7 @@ export const productSectors: SectorGroup[] = [
       {
         slug: "animal-skins-hides",
         title: "Animal Skins & Hides",
-        image: "/images/products/hides-skins.jpg",
+        image: "/images/hides2.jpeg",
         alt: "Neatly stacked cured animal hides in a processing warehouse with natural light through a window",
         copy: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling. We specialize in the supply of high-quality bovine and other animal hides and skins, available in both salted and air-dried forms, to buyers across domestic and international markets.",
       },
