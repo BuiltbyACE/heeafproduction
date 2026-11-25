@@ -22,12 +22,20 @@ export const sectorAccents: Record<string, SectorAccent> = {
   },
 };
 
+export type ProductVideo = {
+  src: string;
+  poster: string;
+  caption: string;
+};
+
 export type Product = {
   slug: string;
   title: string;
   image: string;
   alt: string;
   copy: string;
+  videos?: ProductVideo[];
+  overlapVideos?: boolean;
 };
 
 export type SectorGroup = {
@@ -59,6 +67,19 @@ export const productSectors: SectorGroup[] = [
         image: "/images/products/copper.jpg",
         alt: "Stacked copper cathodes and coils in an industrial warehouse under cool overhead lighting",
         copy: "Copper is the backbone of modern infrastructure — essential for electrical wiring, plumbing, construction and electronics manufacturing. HEEAF supplies copper cathodes and refined copper products to manufacturers, construction firms and commodity traders who need consistent grade, clean certification and reliable delivery schedules. Our supply chain spans mining regions to smelters to end buyers, ensuring traceability and quality at every stage.",
+        overlapVideos: true,
+        videos: [
+          {
+            src: "/videos/copper-ore-1.mp4",
+            poster: "/videos/copper-ore-1.jpg",
+            caption: "Raw copper ore, inspected on site",
+          },
+          {
+            src: "/videos/copper-ore-2.mp4",
+            poster: "/videos/copper-ore-2.jpg",
+            caption: "Copper-bearing ore samples up close",
+          },
+        ],
       },
     ],
   },
@@ -75,6 +96,19 @@ export const productSectors: SectorGroup[] = [
         image: "/images/hides2.jpeg",
         alt: "Neatly stacked cured animal hides in a processing warehouse with natural light through a window",
         copy: "HEEAF sources, grades and supplies quality-checked animal skins and hides to tanneries and manufacturers, with emphasis on proper curing, correct grading and timely export handling. We specialize in the supply of high-quality bovine and other animal hides and skins, available in both salted and air-dried forms, to buyers across domestic and international markets.",
+        overlapVideos: true,
+        videos: [
+          {
+            src: "/videos/hides-warehouse.mp4",
+            poster: "/videos/hides-warehouse.jpg",
+            caption: "Cured hides stocked in our warehouse",
+          },
+          {
+            src: "/videos/hides-baling.mp4",
+            poster: "/videos/hides-baling.jpg",
+            caption: "Salted hides pressed and baled for export",
+          },
+        ],
       },
     ],
   },

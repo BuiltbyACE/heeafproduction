@@ -1,4 +1,6 @@
 import Reveal from "@/components/Reveal";
+import AutoVideo from "@/components/AutoVideo";
+import OverlapVideos from "@/components/OverlapVideos";
 import type { Product, SectorAccent } from "@/data/productsServices";
 
 export default function ProductBlock({
@@ -15,7 +17,8 @@ export default function ProductBlock({
   const num = String(index + 1).padStart(2, "0");
 
   return (
-    <div className="grid items-center gap-10 py-12 first:pt-0 last:pb-0 lg:grid-cols-2 lg:gap-16">
+    <div className="py-12 first:pt-0 last:pb-0">
+    <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <Reveal
         variant={reverse ? "right" : "left"}
         className={reverse ? "lg:order-2" : "lg:order-1"}
@@ -46,6 +49,33 @@ export default function ProductBlock({
           {product.copy}
         </p>
       </Reveal>
+    </div>
+
+      {product.videos && product.videos.length > 0 && (
+        <Reveal delay={150} className="mt-12">
+          <p className={`font-[family-name:var(--font-heading)] text-xs font-bold uppercase tracking-[0.18em] ${accent.text}`}>
+            On the ground
+          </p>
+          {product.overlapVideos && product.videos.length === 2 ? (
+            <div className="mt-8">
+              <OverlapVideos videos={[product.videos[0], product.videos[1]]} />
+            </div>
+          ) : (
+          <div className="mt-5 flex flex-wrap gap-6">
+            {product.videos.map((v) => (
+              <figure key={v.src} className="w-full max-w-[260px]">
+                <div className="gold-image-card aspect-[9/16] overflow-hidden rounded-xl bg-primary-darker">
+                  <AutoVideo src={v.src} poster={v.poster} label={v.caption} />
+                </div>
+                <figcaption className="mt-3 text-[13px] leading-snug text-text-dark/70">
+                  {v.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          )}
+        </Reveal>
+      )}
     </div>
   );
 }

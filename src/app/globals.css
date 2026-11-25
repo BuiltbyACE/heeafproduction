@@ -206,3 +206,77 @@ picture {
     animation: none !important;
   }
 }
+
+/* ---- Overlapping video cards (hides) ---- */
+.ov-stage {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.ov-blob {
+  position: absolute;
+  inset: 4% 2%;
+  background: #fbf1dc;
+  border-radius: 40px;
+  transform: rotate(-4deg);
+}
+.ov-card {
+  --rot: 0deg;
+  position: absolute;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  cursor: pointer;
+  border: 5px solid #fff;
+  outline: 2px solid #e0a526;
+  border-radius: 22px;
+  background: #1f1a12;
+  box-shadow: 0 30px 60px -12px rgba(60, 40, 5, 0.38);
+  transform: rotate(var(--rot));
+  transition: transform 0.45s ease, z-index 0s;
+  font-family: var(--font-body), Arial, sans-serif;
+}
+.ov-back { --rot: -5deg; width: 52%; top: 0; left: 0; z-index: 1; }
+.ov-front { --rot: 4deg; width: 46%; bottom: 0; right: 0; z-index: 2; }
+.ov-card.active { z-index: 3; transform: rotate(calc(var(--rot) * 0.3)) scale(1.03); }
+@media (hover: hover) {
+  .ov-card:hover { z-index: 3; transform: rotate(calc(var(--rot) * 0.3)) scale(1.03); }
+}
+.ov-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e0a526;
+  color: #fff;
+  pointer-events: none;
+}
+.ov-caption {
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+  z-index: 2;
+  max-width: calc(100% - 20px);
+  padding: 7px 12px;
+  border-left: 4px solid #e0a526;
+  border-radius: 8px;
+  background: #fff;
+  color: #2a2418;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  pointer-events: none;
+}
+.ov-back .ov-caption { max-width: 60%; }
+@media (max-width: 599px) {
+  .ov-stage { width: 360px; height: 520px; }
+  .ov-back { width: 60%; }
+  .ov-front { width: 54%; }
+  .ov-caption { font-size: 11.5px; }
+}
