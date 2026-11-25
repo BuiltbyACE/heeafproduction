@@ -19,11 +19,6 @@ export default function OverlapVideos({ videos }: { videos: [ProductVideo, Produ
           onClick={() => setActive(active === i ? null : i)}
         >
           <AutoVideo src={v.src} poster={v.poster} label={v.caption} />
-          <span className="ov-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </span>
           <span className="ov-caption">{v.caption}</span>
         </div>
       ))}

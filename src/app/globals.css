@@ -234,28 +234,14 @@ picture {
   background: #1f1a12;
   box-shadow: 0 30px 60px -12px rgba(60, 40, 5, 0.38);
   transform: rotate(var(--rot));
-  transition: transform 0.45s ease, z-index 0s;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease;
   font-family: var(--font-body), Arial, sans-serif;
 }
 .ov-back { --rot: -5deg; width: 52%; top: 0; left: 0; z-index: 1; }
 .ov-front { --rot: 4deg; width: 46%; bottom: 0; right: 0; z-index: 2; }
-.ov-card.active { z-index: 3; transform: rotate(calc(var(--rot) * 0.3)) scale(1.03); }
+.ov-card.active { z-index: 3; transform: rotate(0deg) translateY(-14px) scale(1.1); box-shadow: 0 44px 80px -12px rgba(60, 40, 5, 0.55); }
 @media (hover: hover) {
-  .ov-card:hover { z-index: 3; transform: rotate(calc(var(--rot) * 0.3)) scale(1.03); }
-}
-.ov-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #e0a526;
-  color: #fff;
-  pointer-events: none;
+  .ov-card:hover { z-index: 3; transform: rotate(0deg) translateY(-14px) scale(1.1); box-shadow: 0 44px 80px -12px rgba(60, 40, 5, 0.55); }
 }
 .ov-caption {
   position: absolute;
