@@ -4,6 +4,7 @@ import AboutHero from "@/components/AboutHero";
 import WhoWeAreJourney from "@/components/WhoWeAreJourney";
 import MissionVisionStrip from "@/components/MissionVisionStrip";
 import CoreValues from "@/components/CoreValues";
+import Founder from "@/components/Founder";
 
 export default function AboutPage() {
   return (
@@ -12,6 +13,7 @@ export default function AboutPage() {
       <main className="flex-1">
         <AboutHero />
         <WhoWeAreJourney />
+        <Founder />
         <MissionVisionStrip />
         <CoreValues />
       </main>

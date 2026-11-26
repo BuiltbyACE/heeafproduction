@@ -60,6 +60,13 @@ export const productSectors: SectorGroup[] = [
         image: "/images/gold-image.jpeg",
         alt: "A few gold bars beside a professional safety box filled with gold nuggets, displayed on a dark surface under warm lighting",
         copy: "Gold remains one of the most sought-after precious metals globally, serving as both a store of value and a critical input in electronics, jewelry and financial markets. HEEAF sources and supplies gold to refineries, bullion dealers and industrial buyers, managing assaying, documentation and cross-border logistics with the discretion and compliance that this trade demands. Our supply network is global, enabling us to serve clients across international markets.",
+        videos: [
+          {
+            src: "/images/image22.mp4",
+            poster: "/videos/gold-workshop.jpg",
+            caption: "Inside a metal processing workshop",
+          },
+        ],
       },
       {
         slug: "copper",

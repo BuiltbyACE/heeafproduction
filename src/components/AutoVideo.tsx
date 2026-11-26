@@ -38,8 +38,7 @@ export default function AutoVideo({
       muted
       loop
       playsInline
-      autoPlay
-      preload="auto"
+      preload="none"
       aria-label={label}
     />
   );
