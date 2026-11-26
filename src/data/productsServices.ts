@@ -65,12 +65,12 @@ export const productSectors: SectorGroup[] = [
           {
             src: "/images/image22.mp4",
             poster: "/videos/gold-workshop.jpg",
-            caption: "During a partner refinery visit in Nairobi, Kenya",
+            caption: "Inside a metal processing workshop",
           },
           {
             src: "/images/vedio2.mp4",
             poster: "/videos/gold-workshop-2.jpg",
-            caption: "Working at the bench in the workshop",
+            caption: "During a partner refinery visit in Nairobi, Kenya",
           },
         ],
       },
