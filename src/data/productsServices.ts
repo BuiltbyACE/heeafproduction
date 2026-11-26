@@ -65,7 +65,7 @@ export const productSectors: SectorGroup[] = [
           {
             src: "/images/image22.mp4",
             poster: "/videos/gold-workshop.jpg",
-            caption: "Inside a metal processing workshop",
+            caption: "Small scale gold smelting and packaging",
           },
           {
             src: "/images/vedio2.mp4",
