@@ -297,6 +297,29 @@ function AgriculturalGridSection() {
   );
 }
 
+// The wide shot sets the row height on large screens; the two portrait shots
+// stretch to match it. Positions keep ground clutter out of the crop.
+const warehousePhotos = [
+  {
+    src: "/images/warehouse1.jpeg",
+    alt: "Warehouse exterior with three blue steel loading doors",
+    frame: "col-span-2 aspect-[3/2]",
+    position: "center",
+  },
+  {
+    src: "/images/warehouse.jpeg",
+    alt: "Front of the warehouse showing its gabled wall and blue steel doors",
+    frame: "aspect-[3/4] lg:aspect-auto",
+    position: "center 30%",
+  },
+  {
+    src: "/images/warehouse2.jpeg",
+    alt: "Front of the warehouse with one loading door open",
+    frame: "aspect-[3/4] lg:aspect-auto",
+    position: "center 43%",
+  },
+];
+
 export function SupplyLogisticsSection() {
   return (
     <section className="bg-white">
@@ -341,6 +364,28 @@ export function SupplyLogisticsSection() {
             );
           })}
         </div>
+
+        <Reveal className="mt-16">
+          <p className="text-center font-[family-name:var(--font-heading)] text-xs font-bold uppercase tracking-[0.18em] text-gold">
+            Our Warehouse
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
+            {warehousePhotos.map((photo) => (
+              <figure
+                key={photo.src}
+                className={`gold-image-card relative overflow-hidden rounded-xl ${photo.frame}`}
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="absolute inset-0"
+                  style={{ objectPosition: photo.position }}
+                />
+              </figure>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
